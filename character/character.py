@@ -4,9 +4,13 @@ ADD A DOCSTRING
 
 
 def creat_character(name):
+    """
+    Create a character with specified attributes.
+    """
     character_info = {
         'name': name,
         'level': 1,
+        'experience': 0,
         'hp': 50,
         'str': 15,
         'int': 15,
@@ -17,7 +21,15 @@ def creat_character(name):
     return character_info
 
 
-
+def level_up(character_info):
+    """
+    Increase level of the character.
+    """
+    experience_deduction = [100,200,300,500]
+    character_info['experience'] -= experience_deduction[character_info['level'] - 1]
+    character_info['level'] += 1
+    print(f"Congratulations! You've leveled up.")
+    return character_info
 
 def main():
 
