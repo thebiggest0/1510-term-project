@@ -1,0 +1,13 @@
+{
+    "Thor": {
+        "name": "Thor",
+        "level": 1,
+        "experience": 107,
+        "hp": 20,
+        "str": 15,
+        "int": 15,
+        "dex": 15,
+        "x-coordinate": 7,
+        "y-coordinate": 2
+    }
+}
