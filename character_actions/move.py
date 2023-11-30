@@ -71,22 +71,22 @@ def check_valid_move(position, check_map):
 def main():
     name = input('What is your name: ')
 
-    with open('game_data/character.json', 'r') as file:
+    with open('../game_data/character.json', 'r') as file:
         data = json.load(file)
         if name not in data:
             player = character.creat_character(name)
             save_data.save_game(player)
-            with open('game_data/character.json', 'r') as file:
-                data = json.load(file)
+            with open('game_data/character.json', 'r') as game_file:
+                data = json.load(game_file)
         else:
             player = data[name]
 
     map_size = 10
     player_pos = [data[name]['x-coordinate'], data[name]['y-coordinate']]
-    game_map = initialize_map(map_size)
+    game_map = initialize_map()
     print_map(game_map, player_pos)
     while True:
-        command = input("Enter move (up, down, left, right): ")
+        command = input("Enter 'w', 's', 'a', 'd' to move up, down, left or right: ")
         if command in ['w', 's', 'a', 'd']:
             player_pos = move_player(player_pos, command, map_size, game_map)
 
