@@ -34,6 +34,29 @@ def run_away():
         return False
 
 
+def attack_lightsaber(character, enemy):
+    question = random_sum_generator()
+    user_answer = int(input())
+    damage = 0
+    if user_answer == question:
+        damage += character['str']
+        return damage
+    else:
+        return damage
+
+
+def attack_force(character):
+    question = random_sum_generator()
+    user_answer = int(input())
+    damage = 0
+    if user_answer == question:
+        damage += character['int']
+        return damage
+    else:
+        return damage
+
+
+
 def main():
     pass
 
