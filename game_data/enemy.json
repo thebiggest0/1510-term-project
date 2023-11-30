@@ -1,0 +1,18 @@
+{
+    "Trooper": {
+        "difficulty": 1,
+        "hp": 15,
+        "str": 1,
+        "int": 1,
+        "dex": 1,
+        "experience": 2
+    },
+    "Sith": {
+        "difficulty": 3,
+        "hp": 35,
+        "str": 10,
+        "int": 10,
+        "dex": 10,
+        "experience": 35
+    }
+}
