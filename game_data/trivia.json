@@ -1,0 +1,180 @@
+{
+    "question_1": {
+        "question": "What is the title of Episode III?",
+        "option_one": "The Phantom Menace",
+        "option_two": "Attack of the Clones",
+        "option_three": "Revenge of the Sith",
+        "option_four": "A New Hope",
+        "answer": 3
+    },
+    "question_2": {
+        "question": "Who is Anakin Skywalker's master?",
+        "option_one": "Yoda",
+        "option_two": "Mace Windu",
+        "option_three": "Obi-Wan Kenobi",
+        "option_four": "Qui-Gon Jinn",
+        "answer": 3
+    },
+    "question_3": {
+        "question": "Who is the Chancellor of the Galactic Republic who eventually becomes the Emperor?",
+        "option_one": "Count Dooku",
+        "option_two": "Palpatine",
+        "option_three": "Bail Organa",
+        "option_four": "Mon Mothma",
+        "answer": 2
+    },
+    "question_4": {
+        "question": "What planet is the Wookiee homeworld?",
+        "option_one": "Kashyyyk",
+        "option_two": "Endor",
+        "option_three": "Hoth",
+        "option_four": "Tatooine",
+        "answer": 1
+    },
+    "question_5": {
+        "question": "In Episode IV who is the commander of the Death Star?",
+        "option_one": "Grand Moff Tarkin",
+        "option_two": "Darth Vader",
+        "option_three": "Emperor Palpatine",
+        "option_four": "Admiral Piett",
+        "answer": 1
+    },
+        "question_6": {
+        "question": "In Episode IV who initially captures Princess Leia?",
+        "option_one": "Darth Maul",
+        "option_two": "Darth Vader",
+        "option_three": "Emperor Palpatine",
+        "option_four": "Boba Fett",
+        "answer": 2
+    },
+    "question_7": {
+        "question": "What type of ship is the Millennium Falcon?",
+        "option_one": "Star Destroyer",
+        "option_two": "X-Wing Fighter",
+        "option_three": "Corellian Freighter",
+        "option_four": "TIE Fighter",
+        "answer": 3
+    },
+    "question_8": {
+        "question": "Who kills Jabba the Hutt?",
+        "option_one": "Luke Skywalker",
+        "option_two": "Han Solo",
+        "option_three": "Princess Leia",
+        "option_four": "Chewbacca",
+        "answer": 3
+    },
+    "question_9": {
+        "question": "What is the name of Boba Fett's ship?",
+        "option_one": "Millennium Falcon",
+        "option_two": "Slave I",
+        "option_three": "Star Destroyer",
+        "option_four": "X-Wing Fighter",
+        "answer": 2
+    },
+    "question_10": {
+        "question": "Which planet does the Death Star destroy in Episode IV?",
+        "option_one": "Alderaan",
+        "option_two": "Hoth",
+        "option_three": "Tatooine",
+        "option_four": "Naboo",
+        "answer": 1
+    },
+    "question_11": {
+        "question": "Who is Luke and Leia's mother?",
+        "option_one": "Shmi Skywalker",
+        "option_two": "Mon Mothma",
+        "option_three": "Padmé Amidala",
+        "option_four": "Ahsoka Tano",
+        "answer": 3
+    },
+    "question_12": {
+        "question": "In Episode V who is the administrator of Cloud City?",
+        "option_one": "Lando Calrissian",
+        "option_two": "Han Solo",
+        "option_three": "Boba Fett",
+        "option_four": "Wedge Antilles",
+        "answer": 1
+    },
+    "question_13": {
+        "question": "In Episode V what is the name of the city where Han and Leia take refuge?",
+        "option_one": "Mos Eisley",
+        "option_two": "Cloud City",
+        "option_three": "Naboo",
+        "option_four": "Alderaan",
+        "answer": 2
+    },
+    "question_14": {
+        "question": "What type of droid is C-3PO?",
+        "option_one": "Astromech Droid",
+        "option_two": "Protocol Droid",
+        "option_three": "Battle Droid",
+        "option_four": "Assassin Droid",
+        "answer": 2
+    },
+    "question_15": {
+        "question": "Who is the bounty hunter that captures Han Solo in Episode V?",
+        "option_one": "Jango Fett",
+        "option_two": "Boba Fett",
+        "option_three": "IG-88",
+        "option_four": "Bossk",
+        "answer": 2
+    },
+    "question_16": {
+        "question": "What is the name of the creature that lives in the garbage compactor of the Death Star?",
+        "option_one": "Rancor",
+        "option_two": "Sarlacc",
+        "option_three": "Wampa",
+        "option_four": "Dianoga",
+        "answer": 4
+    },
+    "question_17": {
+        "question": "What planet does Luke Skywalker visit to find Yoda in Episode V?",
+        "option_one": "Dagobah",
+        "option_two": "Tatooine",
+        "option_three": "Hoth",
+        "option_four": "Endor",
+        "answer": 1
+    },
+    "question_18": {
+        "question": "Which planet does Obi-Wan travel to in Episode III to find General Grievous?",
+        "option_one": "Kamino",
+        "option_two": "Geonosis",
+        "option_three": "Utapau",
+        "option_four": "Mustafar",
+        "answer": 3
+    },
+    "question_19": {
+        "question": "In Episode VI who kills the Emperor?",
+        "option_one": "Luke Skywalker",
+        "option_two": "Darth Vader",
+        "option_three": "Princess Leia",
+        "option_four": "Han Solo",
+        "answer": 2
+    },
+    "question_20": {
+        "question": "What is the name of Luke's childhood friend who pilots a snow speeder in Episode V?",
+        "option_one": "Biggs Darklighter",
+        "option_two": "Wedge Antilles",
+        "option_three": "Lando Calrissian",
+        "option_four": "Dak Ralter",
+        "answer": 4
+    },
+    "question_21": {
+        "question": "What is the name of the Wookiee who helps Yoda escape the clone troopers in Episode III?",
+        "option_one": "Tarfful",
+        "option_two": "Chewbacca",
+        "option_three": "Lowbacca",
+        "option_four": "Gungi",
+        "answer": 2
+    },
+    "question_22": {
+        "question": "What is the name of the creature Luke fights in Jabba's palace in Episode VI?",
+        "option_one": "Bantha",
+        "option_two": "Rancor",
+        "option_three": "Sarlacc",
+        "option_four": "Tauntaun",
+        "answer": 2
+    }
+
+
+}
