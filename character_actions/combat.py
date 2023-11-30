@@ -18,6 +18,13 @@ def random_sum_generator():
     return [f'({number_one} {operation} {number_two} = ? )', random_result]
 
 
+def random_product_generator():
+    number_one = random.randrange(-100, 500)
+    number_two = random.randrange(-100, 300)
+    random_result = number_one * number_two
+    return [f'({number_one} * {number_two} = ? )', random_result]
+
+
 def run_away():
     dice = random.randrange(0, 6)
     player_guess = int(input('Guess a number between 1-6 inclusive: '))
