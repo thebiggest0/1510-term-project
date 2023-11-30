@@ -4,7 +4,21 @@ ADD A DOCSTRING
 
 
 def intro_text():
-    pass
+    print("""It is an era of dire betrayal across the Republic. The once noble Jedi Order has collapsed under a 
+    shocking act of treachery from within. In a single, calculated strike, the clone troopers, loyal soldiers of the 
+    Republic, have turned on their Jedi commanders, executing the infamous Order 66.
+
+    Hiding in the sprawling metropolis of Coruscant, a planet teeming with a trillion souls, you stand as the last 
+    surviving Jedi, a lone beacon of hope amidst the chaos. The very forces you once fought alongside have become 
+    relentless hunters, sworn to your extinction.
+    
+    The Galactic Republic, under the shadow of manipulation, fears the return of the Jedi might inspire a wave of 
+    resistance, and the newly anointed Galactic Empire's dominion would be threatened.
+    
+    To preserve your legacy and unravel the truth, your mission is clear: you must brave the dangers of a city turned 
+    hostile, infiltrate the besieged Jedi Temple, and uncover the machinations behind this devastating turn of events. 
+    Survival is your first challenge, but the secrets within the hallowed halls of the Temple may hold the key to the 
+    fate of the Force itself.""")
 
 
 def name_entry():
@@ -25,10 +39,6 @@ def name_entry():
                 return name
             else:
                 name = ''
-
-
-def instructions():
-    pass
 
 
 def difficulty_checker():
