@@ -56,6 +56,29 @@ def attack_force(character):
         return damage
 
 
+def experience_up(character, enemy):
+    character['experience'] += enemy['experience']
+
+
+def register_damage_outgoing(character, enemy, output_damage):
+    enemy['hp'] -= output_damage
+    if enemy['hp'] <= 0:
+        print(f'You slayed {enemy["name"]}')
+        return True
+    else:
+        print(f'You delt {output_damage} to {enemy["name"]}')
+        return False
+
+
+def register_damage_incoming(character, enemy, incoming_damage):
+    character['hp'] -= incoming_damage
+    if character['hp'] <= 0:
+        print('Your HP has fallen to 0, you have died...')
+        return False
+    else:
+        print(f'You took {incoming_damage} damage')
+        return True
+    # relate this to player_alive = boolean
 
 def main():
     pass
