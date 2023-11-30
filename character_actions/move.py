@@ -1,6 +1,8 @@
 """
 
 """
+
+
 def check_valid_move(position, game_map):
     pass
 
@@ -24,6 +26,17 @@ def move_player(position, direction, map_size, game_map):
     else:
         print('You can not go there, it is a wall')
         return [position[0] - a, position[1] - b]
+
+
+def print_map(game_map, player_position):
+    for index_row in range(len(game_map)):
+        print('|', end=' ')
+        for index_column in range(len(game_map[index_row])):
+            if [index_column, index_row] == player_position:
+                print('X', end=' ')
+            else:
+                print(game_map[index_row][index_column], end=' ')
+        print('|')
 
 
 def main():
