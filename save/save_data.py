@@ -24,15 +24,6 @@ def write_json(character):
         json.dump(data, file, indent=4)
 
 
-def read_json(file_location):
-    # file_location = 'game_data/character.json'
-    with open(file_location, 'r') as file:
-        output_file = json.load(file)
-        print(output_file)
-        print(type(output_file))
-        print(output_file['Tom']['level'])
-
-
 def read_character(name):
     file_location = '../game_data/character.json'
     with open(file_location, 'r') as file:
@@ -48,7 +39,7 @@ def read_enemy():
 
 
 def main():
-    test_json()
+    pass
 
 
 if __name__ == "__main__":
