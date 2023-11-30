@@ -1,76 +1,26 @@
 """
 ADD A DOCSTRING
 """
+import json
 
 
-def adjust_to_difficulty(enemy_info, difficulty):
-    stats = {'easy': 1, 'medium': 2, 'hard': 3}
-    for stat in ['hp', 'str', 'int', 'dex']:
-        enemy_info[stat] *= stats[difficulty]
-    return
-
-
-def create_enemy(enemy_names, difficulty):
+def create_enemy(difficulty):
     """
     Create an enemy with specified attributes.
     """
-    enemy_info = {
-        'name': enemy_names,
-        'hp': 50,
-        'str': 5,
-        'int': 5,
-        'dex': 5,
-    }
-    adjust_to_difficulty(enemy_info, difficulty)
+    stats = {'easy': 1, 'medium': 2, 'hard': 3}
+    enemy_data = '../game_data/enemy.json'
+    with open(enemy_data, 'r') as output_data:
+        data = json.load(output_data)
 
+        for name in data:
+            for key in data[name]:
+                if key in ['hp', 'str', 'int', 'dex']:
+                    data[name][key] *= stats[difficulty]
 
-    return enemy_info
-
-def create_vader(difficulty):
-    enemy_info = {
-        'name': 'darth vader',
-        'hp': 50,
-        'str': 15,
-        'int': 15,
-        'dex': 15,
-        "combat_moves":
-            {
-            'slash': 20,
-            'plunge': 30,
-            'choke': 50,
-            'force': 10,
-            },
-        "battle_dialogue":
-            {
-            'text_one': 'Luke I am your farther',
-            'text_two': 'Placeholder',
-            }
-    }
-    adjust_to_difficulty(enemy_info, difficulty)
-    return enemy_info
-
-
-def create_emperor():
-    enemy_info = {
-        'name': 'palpatine',
-        'hp': 50,
-        'str': 15,
-        'int': 15,
-        'dex': 15,
-        "combat_moves":
-            {
-                'slash': 20,
-                'choke': 50,
-                'thunder': 15,
-                'force': 10
-            },
-        "battle_dialogue":
-            {
-                'text_one': 'Luke I am your farther',
-                'text_two': 'Placeholder',
-            }
-    }
-    return enemy_info
+            # update json file with new updated data
+            with open('../game_data/enemy.json', 'w') as file:
+                json.dump(data, file, indent=4)
 
 
 def main():
