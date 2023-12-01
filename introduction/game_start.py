@@ -48,6 +48,15 @@ def name_entry():
 
 
 def difficulty_checker():
+    """
+    Check if the difficulty user entered is valid.
+
+    :precondition: function is called when the program requires the user to choose difficulty
+    :postcondition: check if the difficulty user entered is valid
+    :return: an int representing the selected difficulty level, 1 for easy, 2 for medium and 3 for hard
+    :raise ValueError: if user's input is not an int
+    :raise IndexError: if user's input is not int 1, 2 or 3
+    """
     number_input = int(input('Select difficulty: Enter (1):easy, (2):medium, (3):hard:'))
     if type(number_input) != int:
         raise ValueError
