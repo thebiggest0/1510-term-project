@@ -7,6 +7,9 @@ import json
 
 
 def initialize_map():
+    """
+    NO DOCSTRING FOR NOW
+    """
     # make base map with '_' for each block
     # map = [['_' for _ in range(size)] for _ in range(size)]
     game_map = [
@@ -25,6 +28,33 @@ def initialize_map():
 
 
 def move_player(position, direction, map_size, game_map):
+    """
+    Move the player's position on the game map based on the specified direction.
+
+    :param position: A list representing the current position of the player
+    :param direction: A string representing the direction in which the player wants to move ('a' for left,
+    'd' for right, 'w' for up, 's' for down)
+    :param map_size: An int representing the size of the game map
+    :param game_map: A list of lists representing the game map
+
+    :precondition: position must be a list representing the current position of the player.
+    :precondition: direction must be a string representing a valid movement direction ('a', 'd', 'w', or 's').
+    :precondition: map_size must be an int representing the size of the game map.
+    :precondition: game_map must be a list of lists representing the game map.
+
+    :postcondition: Move the player's position on the game map based on the specified direction.
+                   If the move is valid, return the new position; otherwise, return the original position.
+                   Print a message if the destination is a wall.
+
+    :return: A list representing the new position of the player after the move if it is a valid move;
+             otherwise, the original position.
+    >>> move_player([1, 1], 'w', 3, [['#', '#', '#'], ['#', ' ', '#'], ['#', '#', '#']])
+    You can not go there, it is a wall
+    [1, 1]
+    >>> move_player([2, 2], 's', 3, [['#', '#', '#'], ['#', ' ', '#'], ['#', '#', '#']])
+    You can not go there, it is a wall
+    [2, 2]
+    """
     original_position = position[:]
 
     if direction == 'a' and position[0] > 0:
