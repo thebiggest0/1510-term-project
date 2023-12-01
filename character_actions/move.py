@@ -91,8 +91,22 @@ def print_map(game_map, player_position):
         print('|')
 
 
-def check_valid_move(position, check_map):
-    if check_map[position[1]][position[0]] in ['_', 'O', '*', 'J']:
+def check_valid_move(position, game_map):
+    """
+    Check if a move to the specified position is valid based on the game map.
+
+    :param position: A list representing the target position
+    :param game_map: A list of lists representing the game map
+    :precondition: position must be a list representing the target position
+    :precondition: check_map must be a list of lists representing the game map
+    :postcondition: Return True if the move to the specified position is valid, otherwise return False
+    :return: a Boolean, True if the move is valid, False otherwise
+    >>> check_valid_move([0, 1], [['#', '_', '#'], ['_', 'X', '_'], ['#', '_', '#']])
+    True
+    >>> check_valid_move([0, 1], [['#', '_', '#'], ['#', 'X', '_'], ['#', '_', 'X']])
+    False
+    """
+    if game_map[position[1]][position[0]] in ['_', 'O', '*', 'J']:
         return True
     else:
         return False
