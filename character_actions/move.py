@@ -93,13 +93,6 @@ def print_map(game_map, player_position):
 
 def check_valid_move(position, check_map):
     if check_map[position[1]][position[0]] in ['_', 'O', '*', 'J']:
-        # call battle against level 3 enemy
-        # call enter jedi temple
-        # call talk to jedi ghost
-        # battle: +/-, x
-        # intro
-        # level up
-
         return True
     else:
         return False
