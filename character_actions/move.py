@@ -48,12 +48,10 @@ def move_player(position, direction, map_size, game_map):
 
     :return: A list representing the new position of the player after the move if it is a valid move;
              otherwise, the original position.
-    >>> move_player([1, 1], 'w', 3, [['#', '#', '#'], ['#', ' ', '#'], ['#', '#', '#']])
-    You can not go there, it is a wall
-    [1, 1]
-    >>> move_player([2, 2], 's', 3, [['#', '#', '#'], ['#', ' ', '#'], ['#', '#', '#']])
-    You can not go there, it is a wall
-    [2, 2]
+    >>> move_player([1, 1], 'w', 3, [['_', '_', '_'], ['_', 'X', '_'], ['_', '_', '_']])
+    [1, 0]
+    >>> move_player([0, 0], 's', 3, [['X', '_', '_'], ['_', '_', '_'], ['_', '_', '_']])
+    [0, 1]
     """
     original_position = position[:]
 
