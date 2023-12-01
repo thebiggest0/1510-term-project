@@ -67,6 +67,17 @@ def difficulty_checker():
 
 
 def select_difficulty():
+    """
+    Display difficulty options and prompt the user to select a difficulty level.
+
+    This function prints information about each difficulty level and then calls the `difficulty_checker` function to
+    obtain the user's choice. It handles potential exceptions for invalid inputs and prints corresponding error
+    messages.
+
+    :precondition: function is called when the program requires the user to choose difficulty
+    :postcondition: proceed with the chosen difficulty
+    :return: an int representing the selected difficulty level (1 for easy, 2 for medium, 3 for hard)
+    """
     print('Please select difficulty of game')
     print('Easy: For beginners, enemies will be lower hp and do less damage.')
     print('Medium: For casuals, enemies will be higher hp and do more damage')
