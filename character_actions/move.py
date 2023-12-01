@@ -72,6 +72,15 @@ def move_player(position, direction, map_size, game_map):
 
 
 def print_map(game_map, player_position):
+    """
+    Print the game map with the player's position marked by 'X'.
+
+    :param game_map: A list of lists representing the game map
+    :param player_position: A list representing the current position of the player
+    :precondition: game_map must be a list of lists representing the game map
+    :precondition: player_position must be a list representing the current position of the player
+    :postcondition: Print the game map with the player's position marked by 'X'
+    """
     for index_row in range(len(game_map)):
         print('|', end=' ')
         for index_column in range(len(game_map[index_row])):
