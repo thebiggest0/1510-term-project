@@ -78,19 +78,18 @@ def select_difficulty():
     :postcondition: proceed with the chosen difficulty
     :return: an int representing the selected difficulty level (1 for easy, 2 for medium, 3 for hard)
     """
-    print('Please select difficulty of game')
-    print('Easy: For beginners, enemies will be lower hp and do less damage.')
-    print('Medium: For casuals, enemies will be higher hp and do more damage')
-    print('Hard: For experts, enemies will be----- classified data')
+    while True:
+        print('Please select the difficulty of the game:')
+        print('Easy: For beginners, enemies will have lower HP and do less damage.')
+        print('Medium: For casuals, enemies will have higher HP and do more damage.')
+        print('Hard: For experts, enemies will be----- classified data.')
 
-    try:
-        user_difficulty = difficulty_checker()
-    except ValueError:
-        print('Please input an integer between 1-3 inclusive')
-    except IndexError:
-        print('Please input an integer between 1-3 inclusive')
-    else:
-        return user_difficulty
+        try:
+            user_difficulty = difficulty_checker()
+        except (ValueError, IndexError):
+            print('Invalid input! You must input an integer between 1-3 inclusive.')
+        else:
+            return user_difficulty
 
 
 def main():
