@@ -32,6 +32,20 @@ def random_enemy():
 
 
 def is_valid_choice(value):
+    """
+    Determine if the provided value is a valid choice for a battle.
+
+    :param value: a string the user input to be checked for validity
+    :precondition: value must be a string
+    :postcondition: determine if the provided value is a valid choice for a battle
+    :return: a Boolean, True if the input is a valid whole number 1, 2, or 3; False otherwise
+    >>> is_valid_choice('2')
+    True
+    >>> is_valid_choice('1.5')
+    False
+    >>> is_valid_choice('attack')
+    False
+    """
     try:
         float_value = float(value)
         return float_value.is_integer() and int(float_value) in [1, 2, 3]

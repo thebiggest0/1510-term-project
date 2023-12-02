@@ -31,22 +31,20 @@ def move_player(position, direction, map_size, game_map):
     """
     Move the player's position on the game map based on the specified direction.
 
-    :param position: A list representing the current position of the player
-    :param direction: A string representing the direction in which the player wants to move ('a' for left,
+    :param position: a list representing the current position of the player
+    :param direction: a string representing the direction in which the player wants to move ('a' for left,
     'd' for right, 'w' for up, 's' for down)
-    :param map_size: An int representing the size of the game map
-    :param game_map: A list of lists representing the game map
-
+    :param map_size: an int representing the size of the game map
+    :param game_map: a list of lists representing the game map
     :precondition: position must be a list representing the current position of the player.
     :precondition: direction must be a string representing a valid movement direction ('a', 'd', 'w', or 's').
     :precondition: map_size must be an int representing the size of the game map.
     :precondition: game_map must be a list of lists representing the game map.
-
-    :postcondition: Move the player's position on the game map based on the specified direction.
+    :postcondition: move the player's position on the game map based on the specified direction.
                    If the move is valid, return the new position; otherwise, return the original position.
                    Print a message if the destination is a wall.
 
-    :return: A list representing the new position of the player after the move if it is a valid move;
+    :return: a list representing the new position of the player after the move if it is a valid move;
              otherwise, the original position.
     >>> move_player([1, 1], 'w', 3, [['_', '_', '_'], ['_', 'X', '_'], ['_', '_', '_']])
     [1, 0]
@@ -75,11 +73,11 @@ def print_map(game_map, player_position):
     """
     Print the game map with the player's position marked by 'X'.
 
-    :param game_map: A list of lists representing the game map
-    :param player_position: A list representing the current position of the player
+    :param game_map: a list of lists representing the game map
+    :param player_position: a list representing the current position of the player
     :precondition: game_map must be a list of lists representing the game map
     :precondition: player_position must be a list representing the current position of the player
-    :postcondition: Print the game map with the player's position marked by 'X'
+    :postcondition: print the game map with the player's position marked by 'X'
     """
     for index_row in range(len(game_map)):
         print('|', end=' ')
@@ -95,11 +93,11 @@ def check_valid_move(position, game_map):
     """
     Check if a move to the specified position is valid based on the game map.
 
-    :param position: A list representing the target position
-    :param game_map: A list of lists representing the game map
+    :param position: a list representing the target position
+    :param game_map: a list of lists representing the game map
     :precondition: position must be a list representing the target position
     :precondition: check_map must be a list of lists representing the game map
-    :postcondition: Return True if the move to the specified position is valid, otherwise return False
+    :postcondition: return True if the move to the specified position is valid, otherwise return False
     :return: a Boolean, True if the move is valid, False otherwise
     >>> check_valid_move([0, 1], [['#', '_', '#'], ['_', 'X', '_'], ['#', '_', '#']])
     True
