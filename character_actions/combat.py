@@ -54,6 +54,13 @@ def is_valid_choice(value):
 
 
 def combat_choice():
+    """
+    Get the user's choice for a battle.
+
+    :precondition: function is called to get the user's choice for a battle
+    :postcondition: get the user's choice for a battle
+    :return: an int, the user's valid choice for the battle (1 for attack, 2 for force, 3 for run)
+    """
     while True:
         user_input = input('Battle initiated: (1): attack, (2): force, (3): run: ')
         if is_valid_choice(user_input):
