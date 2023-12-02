@@ -231,10 +231,10 @@ def register_damage_outgoing(enemy, output_damage):
     """
     enemy['hp'] -= output_damage
     if enemy['hp'] <= 0:
-        print(f'You slayed {enemy["name"]}')
+        print(f'You slain {enemy["name"]}')
         return True
     else:
-        print(f'You delt {output_damage} to {enemy["name"]}')
+        print(f'You dealt {output_damage} to {enemy["name"]}')
         return False
 
 
