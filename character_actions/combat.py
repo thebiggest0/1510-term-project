@@ -7,6 +7,14 @@ from save import save_data
 
 
 def random_enemy():
+    """
+    Select a random enemy based on the current level.
+
+    :precondition: function is called to select a random enemy; 'save_data' module is properly initialized
+    and contains enemy data
+    :postcondition: select a random enemy based on the current level
+    :return: a dictionary representing the randomly selected enemy with its attributes
+    """
     level_two_enemy = random.randrange(5)
     if level_two_enemy == 4:
         enemies = save_data.read_enemy()
