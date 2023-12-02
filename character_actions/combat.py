@@ -125,7 +125,13 @@ def random_product_generator():
 
 def run_away():
     """
+    Determine if the user can run away.
 
+    :precondition: function is called to simulate a player attempting to run away
+    :postcondition: generates a random dice roll between 1 and 6, and compares it to the player's guess;
+                   returns 0 if the guess matches the dice roll, and -1 otherwise;
+                   if the player enters a non-integer guess, returns -1
+    :return: an int, 0 if the player's guess matches the dice roll, -1 otherwise
     """
     dice = random.randrange(1, 7)
     try:
