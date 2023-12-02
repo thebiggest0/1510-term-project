@@ -145,9 +145,12 @@ def run_away():
 
 
 def attack_lightsaber(character):
-    question = random_calculate_generator()
-    user_answer = int(input(f'{question[0]}'))
     damage = 1
+    question = random_calculate_generator()
+    try:
+        user_answer = int(input(f'{question[0]}'))
+    except ValueError:
+        return damage
     if user_answer == question[1]:
         damage += character['str']
         return damage
