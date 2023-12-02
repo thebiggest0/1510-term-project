@@ -19,14 +19,14 @@ def random_enemy():
     if level_two_enemy == 4:
         enemies = save_data.read_enemy()
         enemies_list = ['Royal Guard', 'Bounty Hunters', 'Mandalorian', 'Sith Troopers']
-        i = random.randrange(4)
-        enemy = enemies[enemies_list[i]]
+        random_number = random.randrange(4)
+        enemy = enemies[enemies_list[random_number]]
 
     else:
         enemies = save_data.read_enemy()
         enemies_list = ['Clone Trooper', 'Battle Droids', 'Tusken Raiders']
-        i = random.randrange(3)
-        enemy = enemies[enemies_list[i]]
+        random_number = random.randrange(3)
+        enemy = enemies[enemies_list[random_number]]
 
     return enemy
 
