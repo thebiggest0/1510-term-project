@@ -217,6 +217,18 @@ def experience_up(character, enemy):
 
 
 def register_damage_outgoing(enemy, output_damage):
+    """
+    Register outgoing damage to an enemy during a combat scenario.
+
+    :param enemy: a dict representing the enemy's attributes, including keys 'name' and 'hp'
+    :param output_damage: an int representing amount of damage dealt to the enemy
+    :precondition: enemy must be a dict representing the enemy's attributes, including keys 'name' and 'hp'
+    :precondition: output_damage must be an int representing amount of damage dealt to the enemy
+    :postcondition: deduct the output damage from the enemy's hit points; if the enemy's hit points fall to or below
+    0, prints a message indicating the enemy has been slain and returns True; otherwise, prints a message indicating
+    the damage dealt to the enemy and returns False
+    :return: a Boolean, True if the enemy is slain, False otherwise
+    """
     enemy['hp'] -= output_damage
     if enemy['hp'] <= 0:
         print(f'You slayed {enemy["name"]}')
