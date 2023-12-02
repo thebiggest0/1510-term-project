@@ -70,6 +70,16 @@ def combat_choice():
 
 
 def combat_selection(user_choice, character):
+    """
+    Execute a combat function based on the user's choice.
+
+    :param user_choice: an int, user's choice for the combat action (1 for attack, 2 for force, 3 for running away)
+    :param character: a dict representing the character's attributes
+    :precondition: user_choice must be an int, 1, 2 or 3
+    :precondition: character must be a dict representing the character's attributes
+    :postcondition: execute a combat function based on the user's choice
+    :return: The result of the chosen combat function
+    """
     if user_choice == 1:
         return attack_lightsaber(character)
     elif user_choice == 2:
