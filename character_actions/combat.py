@@ -123,34 +123,15 @@ def random_product_generator():
     return [f'{number_one} * {number_two} = ', random_result]
 
 
-def valid_run_away(value):
-    """
-    Determine if the provided value is a valid choice for run away.
-
-    :param value: a string the user input to be checked for validity
-    :precondition: value must be a string
-    :postcondition: determine if the provided value is a valid choice for run away
-    :return: a Boolean, True if the input is a valid whole number 1, 2, 3, 4, 5 or 6; False otherwise
-    >>> is_valid_choice('2')
-    True
-    >>> is_valid_choice('1.5')
-    False
-    >>> is_valid_choice('run')
-    False
-    """
-    try:
-        float_value = float(value)
-        return float_value.is_integer() and int(float_value) in [1, 2, 3, 4, 5, 6]
-    except ValueError:
-        return False
-
-
 def run_away():
     """
 
     """
     dice = random.randrange(1, 7)
-    player_guess = int(input('Guess a number between 1-6 inclusive: '))
+    try:
+        player_guess = int(input('Guess a number between 1-6 inclusive: '))
+    except ValueError:
+        return -1
     if player_guess == dice:
         return 0
     else:
