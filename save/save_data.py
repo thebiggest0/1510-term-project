@@ -5,11 +5,11 @@ ADD A DOCSTRING
 import json
 
 
+# def save_game(character):
+#     write_json(character)
+
+
 def save_game(character):
-    write_json(character)
-
-
-def write_json(character):
 
     # stores all data in json file as 'data'
     with open('../game_data/character.json', 'r') as file:
@@ -33,6 +33,12 @@ def read_character(name):
 
 def read_enemy():
     file_location = '../game_data/enemy.json'
+    with open(file_location, 'r') as file:
+        output_file = json.load(file)
+        return output_file
+
+
+def read_trivia(file_location):
     with open(file_location, 'r') as file:
         output_file = json.load(file)
         return output_file
