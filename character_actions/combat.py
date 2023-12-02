@@ -145,6 +145,16 @@ def run_away():
 
 
 def attack_lightsaber(character):
+    """
+    Simulate a lightsaber attack in a combat scenario.
+
+    :param character: a dictionary representing the character's attributes, including strength ('str')
+    :precondition: function is called to simulate a lightsaber attack
+    :postcondition: generates a random calculation question using the `random_calculate_generator` function
+                   if the user's answer matches the correct result, increases the damage dealt by the character's
+                   strength
+    :return: an int, damage based on the user's answer and the character's strength
+    """
     damage = 1
     question = random_calculate_generator()
     try:
