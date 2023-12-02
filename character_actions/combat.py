@@ -89,6 +89,14 @@ def combat_selection(user_choice, character):
 
 
 def random_sum_generator():
+    """
+    Generate a random mathematical sum.
+
+    :precondition: function is called to generate a random mathematical sum
+    :postcondition: generates two random numbers and performs addition or subtraction based on the result of dice
+    roll
+    :return: a list containing a string representation of the mathematical sum and the result
+    """
     number_one = random.randrange(0, 50)
     number_two = random.randrange(-10, 30)
     dice = random.randrange(0, 6)
