@@ -239,6 +239,18 @@ def register_damage_outgoing(enemy, output_damage):
 
 
 def register_damage_incoming(character, enemy):
+    """
+    Register incoming damage to the character during a combat scenario.
+
+    :param character: a dict representing the character's attributes, with key 'hp'
+    :param enemy: a dict representing the attacking enemy's attributes, with key 'str'
+    :precondition: character must be a dict representing the character's attributes, with key 'hp'
+    :precondition: enemy must be a dict representing the attacking enemy's attributes, with key 'str'
+    :postcondition: deducts the enemy's strength from the character's hit points, if the character's hit points fall
+    to or below 0, prints a message indicating the character has died and returns False, otherwise, prints a message
+    indicating the damage taken and returns True
+    :return: a Boolean, False if the character has died, True otherwise
+    """
     character['hp'] -= enemy['str']
     if character['hp'] <= 0:
         print('Your HP has fallen to 0, you have died...')
