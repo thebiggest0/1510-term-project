@@ -88,14 +88,14 @@ def combat_selection(user_choice, character):
         return run_away()
 
 
-def random_sum_generator():
+def random_calculate_generator():
     """
-    Generate a random mathematical sum.
+    Generate a random mathematical calculation.
 
-    :precondition: function is called to generate a random mathematical sum
+    :precondition: function is called to generate a random mathematical calculation
     :postcondition: generates two random numbers and performs addition or subtraction based on the result of dice
     roll
-    :return: a list containing a string representation of the mathematical sum and the result
+    :return: a list containing a string representation of the mathematical calculation and the result
     """
     number_one = random.randrange(0, 50)
     number_two = random.randrange(-10, 30)
@@ -126,7 +126,7 @@ def run_away():
 
 
 def attack_lightsaber(character):
-    question = random_sum_generator()
+    question = random_calculate_generator()
     user_answer = int(input(f'{question[0]}'))
     damage = 1
     if user_answer == question[1]:
@@ -137,7 +137,7 @@ def attack_lightsaber(character):
 
 
 def attack_force(character):
-    question = random_sum_generator()
+    question = random_calculate_generator()
     user_answer = int(input(f'{question[0]}'))
     damage = 1
     if user_answer == question[1]:
@@ -193,7 +193,6 @@ def main():
                 save_data.write_json(character)
                 battle_status = False
         else:
-        # run away
             if damage == 0:
                 print('You escaped successfully')
                 return
