@@ -110,6 +110,13 @@ def random_calculate_generator():
 
 
 def random_product_generator():
+    """
+    Generate a random mathematical product.
+
+    :precondition: function is called to generate a random mathematical product
+    :postcondition: generates two random numbers and performs multiplication to calculate the product
+    :return: a list containing a string representation of the mathematical product and the result
+    """
     number_one = random.randrange(-5, 15)
     number_two = random.randrange(-5, 15)
     random_result = number_one * number_two
