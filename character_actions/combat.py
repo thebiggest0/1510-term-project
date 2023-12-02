@@ -31,11 +31,21 @@ def random_enemy():
     return enemy
 
 
+def is_valid_choice(value):
+    try:
+        float_value = float(value)
+        return float_value.is_integer() and int(float_value) in [1, 2, 3]
+    except ValueError:
+        return False
+
+
 def combat_choice():
     while True:
-        user_choice = int(input('Battle initiated: (1): attack, (2): force, (3): run: '))
-        if user_choice in [1, 2, 3]:
-            return user_choice
+        user_input = input('Battle initiated: (1): attack, (2): force, (3): run: ')
+        if is_valid_choice(user_input):
+            return int(user_input)
+        else:
+            print('Invalid input! You must input a number 1, 2, or 3. Try again.')
 
 
 def combat_selection(user_choice, character):
