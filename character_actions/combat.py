@@ -193,6 +193,26 @@ def attack_force(character):
 
 
 def experience_up(character, enemy):
+    """
+    Increase the character's experience points based on defeating an enemy.
+
+    :param character: a dict representing the character's attributes, with a key 'experience'
+    :param enemy: a dict representing the defeated enemy's attributes, with a key 'experience'
+    :precondition: character must be a dict representing the character's attributes, with a key 'experience'
+    :precondition: enemy  must be a dict representing the defeated enemy's attributes, with a key 'experience'
+    :postcondition: increase the character's experience points based on defeating an enemy
+    >>> character_data = {'name': 'Jedi Knight', 'experience': 50, 'health': 100, 'attack': 25, 'defense': 15}
+    >>> enemy_data = {'name': 'Sith Lord', 'experience': 30, 'health': 80, 'attack': 20, 'defense': 10}
+    >>> experience_up(character_data, enemy_data)
+    >>> character_data['experience']
+    80
+
+    >>> character_data = {'name': 'Thor', 'experience': 10, 'health': 100, 'attack': 25, 'defense': 15}
+    >>> enemy_data = {'name': 'Loki', 'experience': 10, 'health': 80, 'attack': 20, 'defense': 10}
+    >>> experience_up(character_data, enemy_data)
+    >>> character_data['experience']
+    20
+    """
     character['experience'] += enemy['experience']
 
 
