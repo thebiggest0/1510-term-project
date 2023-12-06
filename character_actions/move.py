@@ -15,9 +15,9 @@ def initialize_map():
     game_map = [
            ['_', '_', '_', '_', '_', '_', '#', '_', '_', '_'],
            ['_', '_', '_', '_', '_', '_', '_', 'O', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
+           ['_', '_', '_', '_', '_', '_', '_', 'J', '_', '_'],
+           ['_', '_', '_', '_', '_', '_', '_', 'V', '_', '_'],
+           ['_', '_', '_', '_', '_', '_', '_', 'P', '_', '_'],
            ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
            ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
            ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
@@ -104,7 +104,7 @@ def check_valid_move(position, game_map):
     >>> check_valid_move([0, 1], [['#', '_', '#'], ['#', 'X', '_'], ['#', '_', 'X']])
     False
     """
-    if game_map[position[1]][position[0]] in ['_', 'O', '*', 'J']:
+    if game_map[position[1]][position[0]] in ['_', 'O', 'V', 'J', 'P']:
         return True
     else:
         return False
@@ -113,19 +113,19 @@ def check_valid_move(position, game_map):
 def main():
     name = input('What is your name: ')
 
-    with open('game_data/character.json', 'r') as file:
+    with open('../game_data/character.json', 'r') as file:
         data = json.load(file)
         if name not in data:
             player = character.creat_character(name)
             save_data.save_game(player)
-            with open('game_data/character.json', 'r') as file:
+            with open('../game_data/character.json', 'r') as file:
                 data = json.load(file)
         else:
             player = data[name]
 
     map_size = 10
     player_pos = [data[name]['x-coordinate'], data[name]['y-coordinate']]
-    game_map = initialize_map(map_size)
+    game_map = initialize_map()
     print_map(game_map, player_pos)
     while True:
         command = input("Enter move (up, down, left, right): ")
