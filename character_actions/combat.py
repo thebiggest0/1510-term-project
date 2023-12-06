@@ -27,7 +27,6 @@ def random_enemy():
         enemies_list = ['Clone Trooper', 'Battle Droids', 'Tusken Raiders']
         random_number = random.randrange(3)
         enemy = enemies[enemies_list[random_number]]
-
     return enemy
 
 
@@ -229,6 +228,8 @@ def register_damage_outgoing(enemy, output_damage):
     the damage dealt to the enemy and returns False
     :return: a Boolean, True if the enemy is slain, False otherwise
     """
+    print(enemy)
+    print(output_damage, type(output_damage))
     enemy['hp'] -= output_damage
     if enemy['hp'] <= 0:
         print(f'You slain {enemy["name"]}')
@@ -261,9 +262,73 @@ def register_damage_incoming(character, enemy):
     # relate this to player_alive = boolean
 
 
+def fight_boss(boss_name):
+    enemies = save_data.read_enemy()
+    boss = enemies[boss_name]
+    return boss
+
+
+def fight_mini_boss():
+    enemies = save_data.read_enemy()
+    for enemy in enemies:
+        if enemies[enemy]['difficulty'] == 3:
+            mini_boss = enemies.pop(enemy)
+            save_data.update_enemies(enemies)
+            return mini_boss
+
+
+def event_checker(coordinates):
+    if coordinates == '_':
+        # number = random.randrange(2)
+        # if number == 1:
+        #     return random_enemy()
+        # else:
+        #     return False
+        return False
+    elif coordinates == 'J':
+        return False
+    elif coordinates == 'O':
+        return fight_mini_boss()
+    elif coordinates == 'V':
+        return fight_boss('Darth Vader')
+    elif coordinates == 'P':
+        return fight_boss('Emperor')
+
+
+def fight_enemy(character, enemy):
+    battle_status = True
+    while battle_status:
+        user_choice = combat_choice()
+        damage = combat_selection(user_choice, character)
+        if damage and damage != -1:
+            print('dmg delt =', damage)
+            # damage enemy
+            register_damage_outgoing(enemy, damage)
+
+            # if enemy not dead, they attack you
+            if enemy['hp'] > 0:
+                register_damage_incoming(character, enemy)
+            else:
+                experience_up(character, enemy)
+                save_data.save_game(character)
+                battle_status = False
+        else:
+            if damage == 0:
+                print('You escaped successfully')
+                return
+            else:
+                print('ran away but took dmg of', damage)
+                character['hp'] -= damage
+
+
 def main():
     name = 'Thor'
     enemy = random_enemy()
+
+    # if coordinate = 'O'
+        # enemy = fight_mini_boss()
+    # if coordinate = 'V' or 'P'
+        # enemy = fight_boss('Darth Vader')
     character = save_data.read_character(name)
     battle_status = True
     while battle_status:
@@ -279,7 +344,7 @@ def main():
                 register_damage_incoming(character, enemy)
             else:
                 experience_up(character, enemy)
-                save_data.write_json(character)
+                save_data.save_game(character)
                 battle_status = False
         else:
             if damage == 0:
