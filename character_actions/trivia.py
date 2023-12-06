@@ -81,6 +81,16 @@ def player_stat_increase(name):
     save_data.save_game(player_data)
 
 
+def jedi_interaction(name):
+    jedi_dialogue()
+    question = star_wars_trivia()
+    ask_trivia(question)
+    choice = player_choice()
+    if choice == 1:
+        player_stat_increase(name)
+    else:
+        player_heal(name)
+
 def main():
     name = 'Thor'
 
