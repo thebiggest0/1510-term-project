@@ -81,5 +81,19 @@
         "hp": 100,
         "str": 10,
         "experience": 5
+    },
+    "Darth Vader": {
+        "name": "Darth Vader",
+        "difficulty": 4,
+        "hp": 200,
+        "str": 20,
+        "experience": 500
+    },
+    "Emperor": {
+        "name": "Palpatine",
+        "difficulty": 4,
+        "hp": 300,
+        "str": 25,
+        "experience": 0
     }
 }
