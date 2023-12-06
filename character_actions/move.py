@@ -13,17 +13,23 @@ def initialize_map():
     # make base map with '_' for each block
     # map = [['_' for _ in range(size)] for _ in range(size)]
     game_map = [
-           ['_', '_', '_', '_', '_', '_', '#', '_', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', 'O', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', 'J', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', 'V', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', 'P', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'],
-           ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_']]
+           ["J", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "O", " ", "J"],
+           ["#", "#", " ", "#", "#", "#", " ", " ", "#", "#", "#", "#", "#", "O"],
+           [" ", "#", " ", "#", "J", "#", " ", " ", " ", " ", " ", "#", " ", " "],
+           [" ", " ", " ", "#", "O", " ", " ", " ", " ", " ", " ", " ", "#", " "],
+           [" ", " ", " ", "#", "#", "#", "#", "#", "#", " ", " ", " ", " ", " "],
+           [" ", "#", "J", " ", "#", " ", " ", " ", "#", "#", "#", "#", "#", " "],
+           [" ", "#", "#", "#", "#", " ", "p", " ", "J", "V", " ", " ", " ", " "],
+           [" ", " ", " ", " ", "#", " ", " ", " ", "#", "#", "#", "#", "#", "#"],
+           [" ", " ", " ", " ", "#", "#", "#", "#", "#", " ", " ", " ", " ", " "],
+           [" ", " ", " ", "#", " ", "#", " ", " ", "J", " ", " ", " ", " ", " "],
+           ["#", " ", "O", " ", " ", "#", " ", " ", " ", "#", "#", "#", " ", " "],
+           ["J", "#", " ", " ", " ", "#", " ", " ", " ", "#", " ", "#", " ", " "],
+           [" ", " ", " ", " ", "J", "O", " ", " ", " ", "#", " ", " ", "J", " "]]
+    count = 0
+    for i in game_map:
+        count += i.count(' ')
+    print(count)
     return game_map
 
 
@@ -79,14 +85,16 @@ def print_map(game_map, player_position):
     :precondition: player_position must be a list representing the current position of the player
     :postcondition: print the game map with the player's position marked by 'X'
     """
+    print('_ ' + ' _ ' * len(game_map[0]) + ' _')
     for index_row in range(len(game_map)):
-        print('|', end=' ')
+        print('|', end='  ')
         for index_column in range(len(game_map[index_row])):
             if [index_column, index_row] == player_position:
-                print('X', end=' ')
+                print('X', end='  ')
             else:
-                print(game_map[index_row][index_column], end=' ')
+                print(game_map[index_row][index_column], end='  ')
         print('|')
+    print('- ' + ' - ' * len(game_map[0]) + ' -')
 
 
 def check_valid_move(position, game_map):
@@ -104,7 +112,7 @@ def check_valid_move(position, game_map):
     >>> check_valid_move([0, 1], [['#', '_', '#'], ['#', 'X', '_'], ['#', '_', 'X']])
     False
     """
-    if game_map[position[1]][position[0]] in ['_', 'O', 'V', 'J', 'P']:
+    if game_map[position[1]][position[0]] in [' ','_', 'O', 'V', 'J', 'P']:
         return True
     else:
         return False
