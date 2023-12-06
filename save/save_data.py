@@ -44,6 +44,12 @@ def read_trivia(file_location):
         return output_file
 
 
+def update_enemies(data):
+    file_location = '../game_data/enemy.json'
+    with open(file_location, 'w') as file:
+        json.dump(data, file, indent=4)
+
+
 def main():
     pass
 
