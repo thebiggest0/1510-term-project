@@ -2,12 +2,12 @@
     "Thor": {
         "name": "Thor",
         "level": 1,
-        "experience": 107,
-        "hp": 20,
-        "str": 15,
-        "int": 15,
-        "dex": 15,
-        "x-coordinate": 0,
+        "experience": 629,
+        "hp": 50,
+        "str": 25,
+        "int": 20,
+        "dex": 20,
+        "x-coordinate": 6,
         "y-coordinate": 1
     }
 }
