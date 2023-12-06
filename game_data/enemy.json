@@ -23,27 +23,28 @@
     "Royal Guard": {
         "name": "Royal Guard",
         "difficulty": 2,
-        "hp": 50,
+        "hp": 40,
         "str": 10,
         "experience": 5
     },
     "Bounty Hunters": {
         "name": "Royal Guard",
         "difficulty": 2,
-        "hp": 50,
+        "hp": 40,
         "str": 10,
         "experience": 5
     },
     "Magnaguard": {
         "name": "Magnaguard",
         "difficulty": 2,
-        "hp": 50,
+        "hp": 40,
         "str": 10,
-        "experience": 5},
+        "experience": 5
+    },
     "Mandalorian": {
         "name": "Mandalorian",
         "difficulty": 2,
-        "hp": 50,
+        "hp": 40,
         "str": 10,
         "experience": 5
     },
@@ -54,32 +55,39 @@
         "str": 10,
         "experience": 5
     },
-    "Count Dooku": {
-        "name": "Count Dooku",
-        "difficulty": 3,
-        "hp": 50,
-        "str": 10,
-        "experience": 5
-    },
     "Asajj Ventress": {
         "name": "Asajj Ventress",
         "difficulty": 3,
-        "hp": 50,
+        "hp": 100,
         "str": 10,
         "experience": 5
     },
     "General Grievous": {
         "name": "General Grievous",
         "difficulty": 3,
-        "hp": 50,
+        "hp": 100,
         "str": 10,
         "experience": 5
     },
     "Darth Maul": {
         "name": "Darth Maul",
         "difficulty": 3,
-        "hp": 50,
+        "hp": 100,
         "str": 10,
         "experience": 5
+    },
+    "Darth Vader": {
+        "name": "Darth Vader",
+        "difficulty": 4,
+        "hp": 200,
+        "str": 20,
+        "experience": 500
+    },
+    "Emperor": {
+        "name": "Palpatine",
+        "difficulty": 4,
+        "hp": 300,
+        "str": 25,
+        "experience": 0
     }
 }
