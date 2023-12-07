@@ -7,16 +7,25 @@ from character import character_status
 from character_actions import combat
 from character_actions import move
 from character_actions import trivia
+from introduction import game_start
+from conclusion import conclusion
 
 
 def main():
-    name = 'Thor'
-    difficulty = 'easy'
-    enemy.create_enemy(difficulty)
+    name = game_start.name_entry()
+    players = save_data.read_all_characters()
+    if name not in players:
+        game_start.intro_text()
+        player_data = character_status.create_character(name)
+        save_data.save_game(player_data)
+        difficulty = game_start.select_difficulty()
+        game_start.warm_up_question(name)
+        enemy.create_enemy(difficulty)
+
     player = save_data.read_character(name)
     player_current_position = [player['x-coordinate'], player['y-coordinate']]
     game_map = move.initialize_map()
-    map_size = 10
+    map_size = 14
     move.print_map(game_map, player_current_position)
     game_play = True
 
@@ -38,7 +47,7 @@ def main():
             enemy_checker = combat.event_checker(current_spot)
             if enemy_checker:
                 game_end = combat.fight_enemy(player, enemy_checker)
-                character.level_up(player) # test level up system
+                character_status.level_up(player) # test level up system
             else:
                 if current_spot == 'J':
                     trivia.jedi_interaction(player['name'])
@@ -51,7 +60,10 @@ def main():
         if game_end:
             game_play = False
 
-    print('Congratulations you won!')
+    if player['hp'] <= 0:
+        conclusion.game_lose()
+    else:
+        conclusion.game_win()
 
 
 if __name__ == "__main__":
