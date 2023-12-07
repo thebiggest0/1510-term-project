@@ -31,6 +31,13 @@ def read_character(name):
         return output_file[name]
 
 
+def read_all_characters():
+    file_location = '../game_data/character.json'
+    with open(file_location, 'r') as file:
+        output_file = json.load(file)
+        return output_file
+
+
 def read_enemy():
     file_location = '../game_data/enemy.json'
     with open(file_location, 'r') as file:
