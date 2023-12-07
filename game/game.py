@@ -1,5 +1,5 @@
 """
-ADD A DOCSTRING
+Play the game.
 """
 from save import save_data
 from enemy import enemy
@@ -12,6 +12,9 @@ from conclusion import conclusion
 
 
 def main():
+    """
+    Run the game.
+    """
     name = game_start.name_entry()
     players = save_data.read_all_characters()
     if name not in players:
@@ -43,7 +46,6 @@ def main():
             move.print_map(game_map, player_pos)
 
             current_spot = game_map[player_pos[1]][player_pos[0]]
-            # initiate the events!!!
             enemy_checker = combat.event_checker(current_spot)
             if enemy_checker:
                 game_end = combat.fight_enemy(player, enemy_checker)
