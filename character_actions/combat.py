@@ -253,6 +253,7 @@ def register_damage_incoming(character, enemy):
     :return: a Boolean, False if the character has died, True otherwise
     """
     character['hp'] -= enemy['str']
+    save_data.save_game(character)
     if character['hp'] <= 0:
         print('Your HP has fallen to 0, you have died...')
         return False
@@ -303,6 +304,7 @@ def event_checker(coordinates):
 def fight_enemy(character, enemy):
     print(enemy)
     battle_status = True
+    character_status = True
     while battle_status:
         user_choice = combat_choice()
         damage = combat_selection(user_choice, character)
@@ -313,7 +315,8 @@ def fight_enemy(character, enemy):
 
             # if enemy not dead, they attack you
             if enemy['hp'] > 0:
-                register_damage_incoming(character, enemy)
+                character_status = register_damage_incoming(character, enemy)
+                battle_status = False
             else:
                 experience_up(character, enemy)
                 save_data.save_game(character)
@@ -325,6 +328,8 @@ def fight_enemy(character, enemy):
             else:
                 print('ran away but took dmg of', damage)
                 character['hp'] -= damage
+    if not character_status:
+        return True
     if enemy['name'] == 'Palpatine':
         return True
 

@@ -65,7 +65,7 @@ def move_player(position, direction, map_size, game_map):
         position[0] += 1
     elif direction == 'w' and position[1] > 0:
         position[1] -= 1
-    elif direction == 's' and position[1] < map_size - 1:
+    elif direction == 's' and position[1] < map_size - 2:
         position[1] += 1
 
     if check_valid_move(position, game_map):
