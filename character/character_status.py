@@ -12,6 +12,10 @@ def create_character(name):
     :precondition: name must be a non-empty string
     :postcondition: create a character dict with specified attributes
     :return: a dict, with specified attributes
+    >>> create_character('Thor')
+    {'name': 'Thor', 'level': 1, 'experience': 0, 'hp': 50, 'str': 15, 'int': 15, 'x-coordinate': 0, 'y-coordinate': 0}
+    >>> create_character('Loki')
+    {'name': 'Loki', 'level': 1, 'experience': 0, 'hp': 50, 'str': 15, 'int': 15, 'x-coordinate': 0, 'y-coordinate': 0}
     """
     character_info = {
         'name': name,

@@ -268,10 +268,12 @@ def fight_vader():
     boss = enemies['Darth Vader']
     return boss
 
+
 def fight_emperor():
     enemies = save_data.read_enemy()
     boss = enemies['Emperor']
     return boss
+
 
 def fight_mini_boss():
     enemies = save_data.read_enemy()
@@ -334,15 +336,9 @@ def fight_enemy(character, enemy):
         return True
 
 
-
 def main():
     name = 'Thor'
     enemy = random_enemy()
-
-    # if coordinate = 'O'
-        # enemy = fight_mini_boss()
-    # if coordinate = 'V' or 'P'
-        # enemy = fight_boss('Darth Vader')
     character = save_data.read_character(name)
     battle_status = True
     while battle_status:
