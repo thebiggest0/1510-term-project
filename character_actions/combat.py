@@ -310,6 +310,14 @@ def fight_mini_boss():
 
 
 def event_checker(coordinates):
+    """
+    Check if the user has encountered an event.
+
+    :param coordinates: a string representing the coordinates of the player's current location
+    :precondition: coordinates must be a string representing the coordinates of the player's current location
+    :postcondition: check if the player has encountered an event
+    :return: a Boolean, True if the player has encountered an event, False otherwise
+    """
     print(coordinates)
     if coordinates == '_' or coordinates == ' ':
         # number = random.randrange(2)
