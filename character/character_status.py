@@ -69,6 +69,9 @@ def stat_increase(character_info):
 
 
 def main():
+    """
+    Drive the program.
+    """
     name = 'Yoda'
     character = create_character(name)
     level_up(character)

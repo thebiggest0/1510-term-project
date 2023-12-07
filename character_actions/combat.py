@@ -1,5 +1,5 @@
 """
-ADD A DOCSTRING
+Combat with enemies.
 """
 
 import random
@@ -337,6 +337,9 @@ def fight_enemy(character, enemy):
 
 
 def main():
+    """
+    Drive the program.
+    """
     name = 'Thor'
     enemy = random_enemy()
     character = save_data.read_character(name)
