@@ -16,7 +16,7 @@ def create_character(name):
     character_info = {
         'name': name,
         'level': 1,
-        'experience': 100,
+        'experience': 0,
         'hp': 50,
         'str': 15,
         'int': 15,
@@ -54,13 +54,12 @@ def stat_increase(character_info):
     :postcondition: increase player stats by 20%
     """
     character_info['hp'] = int(character_info['hp'] * 1.2)
-    stats = ['str', 'int', 'dex']
+    stats = ['str', 'int']
     for stat in stats:
         character_info[stat] = int(character_info[stat] * 1.1)
     save_data.save_game(character_info)
     print('Your stats have increased!')
-    print(f'HP: {character_info["hp"]} \nSTR: {character_info["str"]} \nINT: {character_info["int"]} '
-          f'\nDEX: {character_info["dex"]}')
+    print(f'HP: {character_info["hp"]} \nSTR: {character_info["str"]} \nINT: {character_info["int"]} ')
 
     # figure out how to update stats on GUI maybe?
     # figure out how to store changes to JSON, probably store it when save is called?
