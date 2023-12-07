@@ -279,6 +279,15 @@ def fight_vader():
 
 
 def fight_emperor():
+    """
+    Fight Emperor Palpatine.
+
+    :precondition: function is called to fight Emperor Palpatine
+    :postcondition: return Emperor Palpatine's attributes
+    :return: a dict representing Emperor Palpatine's attributes
+    >>> fight_emperor()
+    {'name': 'Palpatine', 'difficulty': 4, 'hp': 300, 'str': 25, 'experience': 0}
+    """
     enemies = save_data.read_enemy()
     boss = enemies['Emperor']
     return boss
