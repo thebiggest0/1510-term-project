@@ -16,7 +16,7 @@ def create_character(name):
     character_info = {
         'name': name,
         'level': 1,
-        'experience': 100,
+        'experience': 0,
         'hp': 50,
         'str': 15,
         'int': 15,
