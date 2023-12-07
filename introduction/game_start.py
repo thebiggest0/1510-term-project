@@ -123,7 +123,7 @@ def warm_up_question(name):
 
     if user_input == correct_answer:
         character_dict = save_data.read_character(name)
-        character_dict[str] += 5
+        character_dict['str'] += 5
         save_data.save_game(character_dict)
         print('Congratulations! Your answer is correct! Your strength increased by 5! Enjoy your game!')
     else:
@@ -131,7 +131,8 @@ def warm_up_question(name):
 
 
 def main():
-    pass
+    name = 'Thor'
+    warm_up_question(name)
 
 
 if __name__ == "__main__":
