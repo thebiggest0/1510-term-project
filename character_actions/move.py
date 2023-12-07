@@ -2,7 +2,7 @@
 Move the character.
 """
 from save import save_data
-from character import character
+from character import character_status
 import json
 
 
@@ -124,10 +124,10 @@ def main():
     with open('../game_data/character.json', 'r') as file:
         data = json.load(file)
         if name not in data:
-            player = character.creat_character(name)
+            player = character_status.create_character(name)
             save_data.save_game(player)
-            with open('../game_data/character.json', 'r') as file:
-                data = json.load(file)
+            with open('../game_data/character.json', 'r') as game_file:
+                data = json.load(game_file)
         else:
             player = data[name]
 

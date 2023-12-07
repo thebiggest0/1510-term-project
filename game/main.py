@@ -3,7 +3,7 @@ ADD A DOCSTRING
 """
 from save import save_data
 from enemy import enemy
-from character import character
+from character import character_status
 from character_actions import combat
 from character_actions import move
 from character_actions import trivia

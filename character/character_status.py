@@ -4,7 +4,7 @@ Change character status.
 from save import save_data
 
 
-def creat_character(name):
+def create_character(name):
     """
     Create a character with specified attributes.
 
@@ -20,7 +20,6 @@ def creat_character(name):
         'hp': 50,
         'str': 15,
         'int': 15,
-        'dex': 15,
         'x-coordinate': 0,
         "y-coordinate": 0
     }
