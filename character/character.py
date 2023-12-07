@@ -1,11 +1,17 @@
 """
-ADD A DOCSTRING
+Change character status.
 """
 from save import save_data
+
 
 def creat_character(name):
     """
     Create a character with specified attributes.
+
+    :param name: a non-empty string, name of the character user entered
+    :precondition: name must be a non-empty string
+    :postcondition: create a character dict with specified attributes
+    :return: a dict, with specified attributes
     """
     character_info = {
         'name': name,
