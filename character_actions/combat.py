@@ -337,6 +337,16 @@ def event_checker(coordinates):
 
 
 def fight_enemy(character, enemy):
+    """
+    Fight an enemy.
+
+    :param character: a dict representing the character's attributes
+    :param enemy: a dict representing the enemy's attributes
+    :precondition: character must be a dict representing the character's attributes
+    :precondition: enemy must be a dict representing the enemy's attributes
+    :postcondition: fight an enemy
+    :return: a Boolean, True if the player has died, False otherwise
+    """
     print(enemy)
     battle_status = True
     character_status = True
