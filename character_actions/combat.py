@@ -264,6 +264,15 @@ def register_damage_incoming(character, enemy):
 
 
 def fight_vader():
+    """
+    Fight Darth Vader.
+
+    :precondition: function is called to fight Darth Vader
+    :postcondition: return Darth Vader's attributes
+    :return: a dict representing Darth Vader's attributes
+    >>> fight_vader()
+    {'name': 'Darth Vader', 'difficulty': 4, 'hp': 200, 'str': 20, 'experience': 500}
+    """
     enemies = save_data.read_enemy()
     boss = enemies['Darth Vader']
     return boss
