@@ -262,11 +262,15 @@ def register_damage_incoming(character, enemy):
     # relate this to player_alive = boolean
 
 
-def fight_boss(boss_name):
+def fight_vader():
     enemies = save_data.read_enemy()
-    boss = enemies[boss_name]
+    boss = enemies['Darth Vader']
     return boss
 
+def fight_emperor():
+    enemies = save_data.read_enemy()
+    boss = enemies['Emperor']
+    return boss
 
 def fight_mini_boss():
     enemies = save_data.read_enemy()
@@ -278,7 +282,8 @@ def fight_mini_boss():
 
 
 def event_checker(coordinates):
-    if coordinates == '_':
+    print(coordinates)
+    if coordinates == '_' or coordinates == ' ':
         # number = random.randrange(2)
         # if number == 1:
         #     return random_enemy()
@@ -290,12 +295,13 @@ def event_checker(coordinates):
     elif coordinates == 'O':
         return fight_mini_boss()
     elif coordinates == 'V':
-        return fight_boss('Darth Vader')
+        return fight_vader()
     elif coordinates == 'P':
-        return fight_boss('Emperor')
+        return fight_emperor()
 
 
 def fight_enemy(character, enemy):
+    print(enemy)
     battle_status = True
     while battle_status:
         user_choice = combat_choice()
@@ -319,6 +325,9 @@ def fight_enemy(character, enemy):
             else:
                 print('ran away but took dmg of', damage)
                 character['hp'] -= damage
+    if enemy['name'] == 'Palpatine':
+        return True
+
 
 
 def main():
