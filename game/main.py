@@ -21,6 +21,7 @@ def main():
     game_play = True
 
     while game_play:
+        game_end = False
         player = save_data.read_character(name)
         command = input("Enter move (up, down, left, right): ")
         if command in ['w', 's', 'a', 'd']:
@@ -36,7 +37,8 @@ def main():
             # initiate the events!!!
             enemy_checker = combat.event_checker(current_spot)
             if enemy_checker:
-                combat.fight_enemy(player, enemy_checker)
+                game_end = combat.fight_enemy(player, enemy_checker)
+                character.level_up(player) # test level up system
             else:
                 if current_spot == 'J':
                     trivia.jedi_interaction(player['name'])
@@ -45,6 +47,11 @@ def main():
 
         else:
             print("Invalid command")
+
+        if game_end:
+            game_play = False
+
+    print('Congratulations you won!')
 
 
 if __name__ == "__main__":
