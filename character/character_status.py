@@ -28,7 +28,14 @@ def create_character(name):
 
 def level_up(character_info):
     """
-    Increase level of the character.
+    Increase level of the character if it reached certain experience.
+
+    :param character_info: a dict containing the character's attributes
+    :precondition: character_info must be a dict containing the character's attributes
+    :postcondition: increase level of the character in the dict if it reached certain experience, else the dict stay
+    unchanged
+    :return: a dict with updated level if the character reached certain experience, else the dict stay
+    unchanged
     """
     experience_check = [100, 200, 300, 500]
     if experience_check[character_info['level'] - 1] <= character_info['experience']:
@@ -62,7 +69,7 @@ def stat_increase(character_info):
 
 def main():
     name = 'Yoda'
-    character = creat_character(name)
+    character = create_character(name)
     level_up(character)
     # stat_increase(character)
 
