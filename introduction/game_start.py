@@ -95,20 +95,39 @@ def difficulty_checker():
 
 
 def warm_up_question(name):
-    print('Before we begin the game, let us have a warm-up question! If you answer correctly, your strength will '
-          'increase 5.')
-    print('Assume you will meet 3 enemies: Clone Trooper, Battle Droids and Royal Guard, how many permutations will '
-          'you have?')
-    user_input = int(input('Please enter your answer:'))
+    """
+    Conducts a warm-up question for the user.
+
+    This function prompts the user with a warm-up question related to permutations of enemy encounters.
+    If the user answers correctly, their character's strength is increased by 5.
+
+    :param name: a string, name of the player's character
+    :precondition: name must be a string
+    :postcondition: print result to user, update character's strength in json file if the user answers correctly
+    :raises ValueError: if the user's input is not an integer
+    """
+    print('Before we begin the game, let us have a warm-up question! If you answer correctly, '
+          'your strength will increase 5.')
+    print('Assume you will meet 3 enemies: Clone Trooper, Battle Droids, and Royal Guard, '
+          'how many permutations will you have?')
+
+    while True:
+        try:
+            user_input = int(input('Please enter your answer: '))
+            break
+        except ValueError:
+            print('Invalid input. Please enter a valid integer.')
+
     enemy_list = ['Clone Trooper', 'Battle Droids', 'Royal Guard']
     correct_answer = len(list(itertools.permutations(enemy_list)))
+
     if user_input == correct_answer:
         character_dict = save_data.read_character(name)
         character_dict[str] += 5
         save_data.save_game(character_dict)
-        print('Congratulations! Your answer is correct! Your strength increased 5! Enjoy your game!')
+        print('Congratulations! Your answer is correct! Your strength increased by 5! Enjoy your game!')
     else:
-        print(f'Sorry, wrong answer, the correct answer is {correct_answer}. Enjoy your game!')
+        print(f'Sorry, wrong answer. The correct answer is {correct_answer}. Enjoy your game!')
 
 
 def main():
