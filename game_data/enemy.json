@@ -55,20 +55,6 @@
         "str": 10,
         "experience": 5
     },
-    "Asajj Ventress": {
-        "name": "Asajj Ventress",
-        "difficulty": 3,
-        "hp": 100,
-        "str": 10,
-        "experience": 5
-    },
-    "General Grievous": {
-        "name": "General Grievous",
-        "difficulty": 3,
-        "hp": 100,
-        "str": 10,
-        "experience": 5
-    },
     "Darth Maul": {
         "name": "Darth Maul",
         "difficulty": 3,

@@ -294,6 +294,13 @@ def fight_emperor():
 
 
 def fight_mini_boss():
+    """
+    Fight a mini boss.
+
+    :precondition: function is called to fight a mini boss
+    :postcondition: return the mini boss's attributes
+    :return: a dict representing the mini boss's attributes
+    """
     enemies = save_data.read_enemy()
     for enemy in enemies:
         if enemies[enemy]['difficulty'] == 3:
