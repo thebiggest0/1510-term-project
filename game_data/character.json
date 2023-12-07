@@ -3,9 +3,9 @@
         "name": "Thor",
         "level": 3,
         "experience": 10,
-        "hp": 60,
-        "str": 16,
-        "int": 16,
+        "hp": 120,
+        "str": 11,
+        "int": 11,
         "x-coordinate": 0,
         "y-coordinate": 0
     }
