@@ -8,7 +8,7 @@ def create_enemy(difficulty):
     """
     Create an enemy with specified attributes.
     """
-    stats = {'easy': 1, 'medium': 1.25, 'hard': 2}
+    # stats = {'easy': 1, 'medium': 1.25, 'hard': 2}
     enemy_data = '../game_data/enemy_template.json'
     with open(enemy_data, 'r') as output_data:
         data = json.load(output_data)
@@ -16,7 +16,7 @@ def create_enemy(difficulty):
         for name in data:
             for key in data[name]:
                 if key in ['hp', 'str', 'int', 'dex']:
-                    data[name][key] *= stats[difficulty]
+                    data[name][key] *= difficulty
                     int(data[name][key])
 
             # update json file with new updated data
