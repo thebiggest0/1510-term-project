@@ -8,5 +8,15 @@
         "int": 11,
         "x-coordinate": 0,
         "y-coordinate": 0
+    },
+    "Yoda": {
+        "name": "Yoda",
+        "level": 1,
+        "experience": 0,
+        "hp": 60,
+        "str": 16,
+        "int": 16,
+        "x-coordinate": 0,
+        "y-coordinate": 0
     }
 }

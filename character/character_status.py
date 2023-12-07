@@ -68,7 +68,7 @@ def main():
     name = 'Yoda'
     character = create_character(name)
     level_up(character)
-    # stat_increase(character)
+    stat_increase(character)
 
 
 if __name__ == "__main__":
