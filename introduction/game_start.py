@@ -1,6 +1,8 @@
 """
 ADD A DOCSTRING
 """
+import itertools
+from save import save_data
 
 
 def intro_text():
@@ -47,25 +49,6 @@ def name_entry():
                 name = ''
 
 
-def difficulty_checker():
-    """
-    Check if the difficulty user entered is valid.
-
-    :precondition: function is called when the program requires the user to choose difficulty
-    :postcondition: check if the difficulty user entered is valid
-    :return: an int representing the selected difficulty level, 1 for easy, 2 for medium and 3 for hard
-    :raise ValueError: if user's input is not an int
-    :raise IndexError: if user's input is not int 1, 2 or 3
-    """
-    number_input = int(input('Select difficulty: Enter (1):easy, (2):medium, (3):hard:'))
-    if type(number_input) != int:
-        raise ValueError
-    elif number_input not in [1, 2, 3]:
-        raise IndexError
-    else:
-        return number_input
-
-
 def select_difficulty():
     """
     Display difficulty options and prompt the user to select a difficulty level.
@@ -90,6 +73,42 @@ def select_difficulty():
             print('Invalid input! You must input an integer between 1-3 inclusive.')
         else:
             return user_difficulty
+
+
+def difficulty_checker():
+    """
+    Check if the difficulty user entered is valid.
+
+    :precondition: function is called when the program requires the user to choose difficulty
+    :postcondition: check if the difficulty user entered is valid
+    :return: an int representing the selected difficulty level, 1 for easy, 2 for medium and 3 for hard
+    :raise ValueError: if user's input is not an int
+    :raise IndexError: if user's input is not int 1, 2 or 3
+    """
+    number_input = int(input('Select difficulty: Enter (1):easy, (2):medium, (3):hard:'))
+    if type(number_input) != int:
+        raise ValueError
+    elif number_input not in [1, 2, 3]:
+        raise IndexError
+    else:
+        return number_input
+
+
+def warm_up_question(name):
+    print('Before we begin the game, let us have a warm-up question! If you answer correctly, your strength will '
+          'increase 5.')
+    print('Assume you will meet 3 enemies: Clone Trooper, Battle Droids and Royal Guard, how many permutations will '
+          'you have?')
+    user_input = int(input('Please enter your answer:'))
+    enemy_list = ['Clone Trooper', 'Battle Droids', 'Royal Guard']
+    correct_answer = len(list(itertools.permutations(enemy_list)))
+    if user_input == correct_answer:
+        character_dict = save_data.read_character(name)
+        character_dict[str] += 5
+        save_data.save_game(character_dict)
+        print('Congratulations! Your answer is correct! Your strength increased 5! Enjoy your game!')
+    else:
+        print(f'Sorry, wrong answer, the correct answer is {correct_answer}. Enjoy your game!')
 
 
 def main():
