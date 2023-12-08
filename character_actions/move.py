@@ -8,10 +8,12 @@ import json
 
 def initialize_map():
     """
-    NO DOCSTRING FOR NOW
+    Initialize the game map.
+
+    :precondition: function is called to initialize the game map
+    :postcondition: initialize the game map
+    :return: a list of lists, representing the game map
     """
-    # make base map with '_' for each block
-    # map = [['_' for _ in range(size)] for _ in range(size)]
     game_map = [
            ["J", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "O", " ", "J"],
            ["#", "#", " ", "#", "#", "#", " ", " ", "#", "#", "#", "#", "#", "O"],
@@ -26,10 +28,6 @@ def initialize_map():
            ["#", " ", "O", " ", " ", "#", " ", " ", " ", "#", "#", "#", " ", " "],
            ["J", "#", " ", " ", " ", "#", " ", " ", " ", "#", " ", "#", " ", " "],
            [" ", " ", " ", " ", "J", "O", " ", " ", " ", "#", " ", " ", "J", " "]]
-    count = 0
-    for i in game_map:
-        count += i.count(' ')
-    print(count)
     return game_map
 
 
@@ -119,6 +117,9 @@ def check_valid_move(position, game_map):
 
 
 def main():
+    """
+    Drive the program.
+    """
     name = input('What is your name: ')
 
     with open('../game_data/character.json', 'r') as file:
