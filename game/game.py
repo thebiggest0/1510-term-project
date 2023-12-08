@@ -35,11 +35,10 @@ def main():
     while game_play:
         game_end = False
         player = save_data.read_character(name)
-        command = input("Enter move (up, down, left, right): ")
+        command = input("Enter move ('w', 's', 'a' or 'd')to move (up, down, left or right): ")
         if command in ['w', 's', 'a', 'd']:
             player_pos = move.move_player(player_current_position, command, map_size, game_map)
 
-            # update player position
             player['x-coordinate'] = player_pos[0]
             player['y-coordinate'] = player_pos[1]
 

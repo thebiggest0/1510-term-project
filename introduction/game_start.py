@@ -39,9 +39,9 @@ def name_entry():
     """
     name = ''
     while not name:
-        name = input('Please enter your player name: ')
+        name = input('Welcome to the game! Please enter your player name: ')
         if name:
-            final_confirm = input(f'Hello {name}, please confirm your game name: \nEnter "y" or "n" to '
+            final_confirm = input(f'Hello {name}, please confirm your game name: \nEnter "y" to '
                                   f'complete entry: ')
             if final_confirm.strip().lower() == 'y':
                 return name

@@ -46,10 +46,26 @@ def ask_trivia(question):
     print(3, question['option_three'])
     print(4, question['option_four'])
 
-    answer = int(input('Answer: '))
+    while True:
+        try:
+            answer = int(input('Answer: '))
+            if answer in [1, 2, 3, 4]:
+                break
+            else:
+                print("Please enter a number between 1 and 4.")
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
+
     while answer != question['answer']:
         print(question['answer'])
-        answer = int(input('The force ghost says try again: '))
+        try:
+            answer = int(input('The force ghost says try again: '))
+            if answer in [1, 2, 3, 4]:
+                break
+            else:
+                print("Please enter a number between 1 and 4.")
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
 
 
 def player_choice():
