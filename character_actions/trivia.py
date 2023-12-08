@@ -89,9 +89,15 @@ def player_heal(name):
 
 
 def player_stat_increase(name):
+    """
+    Increase the player's strength or intelligence by 5.
 
-    number = random.randrange(3)
-    stats = ['str', 'int', 'dex']
+    :param name: a str, the player's name
+    :precondition: function is called to increase the player's strength or intelligence by 5
+    :postcondition: increase the player's strength or intelligence  by 5
+    """
+    number = random.randrange(2)
+    stats = ['str', 'int']
     stat = stats[number]
     player_data = save_data.read_character(name)
 
