@@ -53,9 +53,24 @@ def ask_trivia(question):
 
 
 def player_choice():
+    """
+    Ask the player to choose between strength or health.
+
+    :precondition: function is called to ask the player to choose between strength or health
+    :postcondition: return the player's choice as an integer
+    :return: an int, the player's choice
+    """
     print('The force ghost asks you to choose between strength or health')
-    answer = int(input('Enter (1) for strength or (2) for healing: '))
-    return answer
+
+    while True:
+        try:
+            answer = int(input('Enter (1) for strength or (2) for healing: '))
+            if answer in [1, 2]:
+                return answer
+            else:
+                print('Invalid choice. Please enter either (1) for strength or (2) for healing.')
+        except ValueError:
+            print('Invalid input. Please enter a valid integer.')
 
 
 def player_heal(name):
