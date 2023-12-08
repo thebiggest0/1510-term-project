@@ -19,11 +19,12 @@ def jedi_dialogue():
 
 def star_wars_trivia():
     """
-    Receive trivia questions from trivia.json.
+    Return a random trivia question from trivia.json.
 
-    :return:
+    :precondition: function is called to return a random trivia question
+    :postcondition: return a dict with random trivia question
+    :return: a dict, with a random trivia question
     """
-
     file = '../game_data/trivia.json'
     data = save_data.read_trivia(file)
     number = random.randrange(23)
