@@ -106,6 +106,13 @@ def player_stat_increase(name):
 
 
 def jedi_interaction(name):
+    """
+    Run the Jedi interaction.
+
+    :param name: a str, the player's name
+    :precondition: function is called to run the Jedi interaction
+    :postcondition: run the Jedi interaction
+    """
     jedi_dialogue()
     question = star_wars_trivia()
     ask_trivia(question)
