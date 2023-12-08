@@ -1,5 +1,5 @@
 """
-ADD A DOCSTRING
+Ask trivia questions.
 """
 
 from save import save_data
@@ -7,6 +7,12 @@ import random
 
 
 def jedi_dialogue():
+    """
+    Print dialogue for Jedi interaction.
+
+    :precondition: function is called to print a dialogue
+    :postcondition: print something to the screen
+    """
     print('You spot a fallen Jedi master and their force ghost waving you to come closer')
     print('To deem you worthy, you are asked a question.')
 
@@ -91,7 +97,11 @@ def jedi_interaction(name):
     else:
         player_heal(name)
 
+
 def main():
+    """
+    Drive the program.
+    """
     name = 'Thor'
 
     jedi_dialogue()
