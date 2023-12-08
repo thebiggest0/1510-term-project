@@ -9,7 +9,7 @@ class TestCreateCharacter(TestCase):
         expected = {
             'name': 'Thor',
             'level': 1,
-            'experience': 100,
+            'experience': 0,
             'hp': 50,
             'str': 15,
             'int': 15,
@@ -24,7 +24,7 @@ class TestCreateCharacter(TestCase):
         expected = {
             'name': 'Loki',
             'level': 1,
-            'experience': 100,
+            'experience': 0,
             'hp': 50,
             'str': 15,
             'int': 15,

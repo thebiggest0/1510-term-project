@@ -35,7 +35,7 @@ class TestMovePlayer(TestCase):
     def test_valid_move_down(self):
         initial_position = [1, 1]
         direction = 's'
-        map_size = 3
+        map_size = 4
         game_map = [['_', '_', '_'], ['_', 'X', '_'], ['_', '_', '_']]
         actual = move_player(initial_position, direction, map_size, game_map)
         expect = [1, 2]
