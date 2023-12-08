@@ -57,9 +57,8 @@ def ask_trivia(question):
             print("Invalid input. Please enter a number between 1 and 4.")
 
     while answer != question['answer']:
-        print(question['answer'])
         try:
-            answer = int(input('The force ghost says try again: '))
+            answer = int(input('Wrong answer! The force ghost says try again: '))
             if answer in [1, 2, 3, 4]:
                 break
             else:

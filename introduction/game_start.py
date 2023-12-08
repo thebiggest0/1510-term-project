@@ -39,7 +39,7 @@ def name_entry():
     """
     name = ''
     while not name:
-        name = input('Welcome to the game! Please enter your player name: ')
+        name = input('Welcome to the Star War game! Please enter your player name: ')
         if name:
             final_confirm = input(f'Hello {name}, please confirm your game name: \nEnter "y" to '
                                   f'complete entry: ')
