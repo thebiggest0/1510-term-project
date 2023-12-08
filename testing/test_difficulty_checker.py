@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import patch
-from game_start import difficulty_checker
+from introduction.game_start import difficulty_checker
 
 
 class TestDifficultyChecker(TestCase):

@@ -1,7 +1,7 @@
 from unittest import TestCase
 import io
 from unittest.mock import patch
-from game_start import select_difficulty
+from introduction.game_start import select_difficulty
 
 
 class Test(TestCase):

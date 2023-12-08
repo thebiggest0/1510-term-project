@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import patch
-from game_start import name_entry
+from introduction.game_start import name_entry
 
 
 class TestNameEntry(TestCase):

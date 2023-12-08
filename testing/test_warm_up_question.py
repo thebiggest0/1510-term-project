@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import patch
 import io
-from game_start import warm_up_question
+from introduction.game_start import warm_up_question
 
 
 class Test(TestCase):

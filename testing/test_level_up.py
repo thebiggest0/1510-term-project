@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import patch
 import io
-from character_status import level_up
+from character.character_status import level_up
 
 
 class TestLevelUp(TestCase):
