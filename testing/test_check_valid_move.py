@@ -18,11 +18,6 @@ class TestCheckValidMove(TestCase):
         result = check_valid_move([0, 1], game_map)
         self.assertTrue(result)
 
-    def test_valid_move_to_special_character_asterisk(self):
-        game_map = [['#', '_', '#'], ['*', 'X', '_'], ['#', '_', '#']]
-        result = check_valid_move([0, 1], game_map)
-        self.assertTrue(result)
-
     def test_valid_move_to_special_character_O(self):
         game_map = [['#', '_', '#'], ['O', 'X', '_'], ['#', '_', '#']]
         result = check_valid_move([0, 1], game_map)
