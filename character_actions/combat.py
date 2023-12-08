@@ -228,8 +228,6 @@ def register_damage_outgoing(enemy, output_damage):
     the damage dealt to the enemy and returns False
     :return: a Boolean, True if the enemy is slain, False otherwise
     """
-    print(enemy)
-    print(output_damage, type(output_damage))
     enemy['hp'] -= output_damage
     if enemy['hp'] <= 0:
         print(f'You slain {enemy["name"]}')
