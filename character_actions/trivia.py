@@ -34,10 +34,11 @@ def star_wars_trivia():
 
 def ask_trivia(question):
     """
-    Ask player a trivia question.
+    Ask the player a trivia question.
 
-    :param question:
-    :return:
+    :param question: a dict, with a random trivia question
+    :precondition: function is called to ask a trivia question
+    :postcondition: print a trivia question to the screen
     """
     print(question['question'])
     print(1, question['option_one'])
