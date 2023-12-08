@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import patch
-from combat import combat_choice
+from character_actions.combat import combat_choice
 
 
 class TestCombatChoice(TestCase):

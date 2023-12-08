@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import patch
 from io import StringIO
-from combat import register_damage_incoming
+from character_actions.combat import register_damage_incoming
 
 
 class Test(TestCase):

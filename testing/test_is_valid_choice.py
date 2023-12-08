@@ -1,5 +1,5 @@
 from unittest import TestCase
-from combat import is_valid_choice
+from character_actions.combat import is_valid_choice
 
 
 class TestValidChoice(TestCase):

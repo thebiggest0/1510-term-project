@@ -1,5 +1,5 @@
 from unittest import TestCase
-from combat import experience_up
+from character_actions.combat import experience_up
 
 
 class TestExperienceUp(TestCase):

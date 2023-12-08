@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import patch
-from combat import run_away
+from character_actions.combat import run_away
 
 
 class TestRunAway(TestCase):

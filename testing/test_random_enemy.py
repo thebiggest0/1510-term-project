@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import patch
-from combat import random_enemy
+from character_actions.combat import random_enemy
 
 
 class TestRandomEnemy(TestCase):

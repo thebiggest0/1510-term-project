@@ -1,5 +1,5 @@
 from unittest import TestCase
-from move import check_valid_move
+from character_actions.move import check_valid_move
 
 
 class TestCheckValidMove(TestCase):

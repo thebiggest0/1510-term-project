@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import patch
 import io
-from move import print_map
+from character_actions.move import print_map
 
 
 class TestPrintMap(TestCase):
