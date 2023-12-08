@@ -75,10 +75,11 @@ def player_choice():
 
 def player_heal(name):
     """
-    Heal player to full hp.
+    Heal the player to full health.
 
-    :param name:
-    :return:
+    :param name: a str, the player's name
+    :precondition: function is called to heal the player to full health
+    :postcondition: print something to the screen
     """
     player_data = save_data.read_character(name)
     healing = {1: 50, 2: 100, 3: 150}
@@ -88,13 +89,7 @@ def player_heal(name):
 
 
 def player_stat_increase(name):
-    """
-    Increase one player stat by 5.
 
-    :param name:
-    :param number:
-    :return:
-    """
     number = random.randrange(3)
     stats = ['str', 'int', 'dex']
     stat = stats[number]
