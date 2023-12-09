@@ -53,7 +53,6 @@ class TestLevelUp(TestCase):
         }
         self.assertEqual(actual, expected)
 
-
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_level_1_level_up_to_2(self, mock_output):
         character_info = {

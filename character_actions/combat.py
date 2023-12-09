@@ -268,8 +268,6 @@ def fight_vader():
     :precondition: function is called to fight Darth Vader
     :postcondition: return Darth Vader's attributes
     :return: a dict representing Darth Vader's attributes
-    >>> fight_vader()
-    {'name': 'Darth Vader', 'difficulty': 4, 'hp': 200, 'str': 20, 'experience': 500}
     """
     enemies = save_data.read_enemy()
     boss = enemies['Darth Vader']
@@ -283,8 +281,6 @@ def fight_emperor():
     :precondition: function is called to fight Emperor Palpatine
     :postcondition: return Emperor Palpatine's attributes
     :return: a dict representing Emperor Palpatine's attributes
-    >>> fight_emperor()
-    {'name': 'Palpatine', 'difficulty': 4, 'hp': 300, 'str': 25, 'experience': 0}
     """
     enemies = save_data.read_enemy()
     boss = enemies['Emperor']
@@ -354,10 +350,8 @@ def fight_enemy(character, enemy):
         damage = combat_selection(user_choice, character)
         if damage and damage != -1:
             print('dmg delt =', damage)
-            # damage enemy
             register_damage_outgoing(enemy, damage)
 
-            # if enemy not dead, they attack you
             if enemy['hp'] > 0:
                 character_status = register_damage_incoming(character, enemy)
                 if not character_status:
@@ -393,10 +387,8 @@ def main():
         damage = combat_selection(user_choice, character)
         if damage and damage != -1:
             print('dmg delt =', damage)
-            # damage enemy
             register_damage_outgoing(enemy, damage)
 
-            # if enemy not dead, they attack you
             if enemy['hp'] > 0:
                 register_damage_incoming(character, enemy)
             else:

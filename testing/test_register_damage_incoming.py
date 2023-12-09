@@ -11,7 +11,7 @@ class Test(TestCase):
         enemy = {'name': 'Royal Guard', 'str': 2}
         result = register_damage_incoming(character, enemy)
         self.assertTrue(result)
-        self.assertEqual(mock_stdout.getvalue().strip(), 'You took 2 damage')
+        self.assertEqual(mock_stdout.getvalue().strip(), 'The enemy fought back and you took 2 damage')
 
     @patch('sys.stdout', new_callable=StringIO)
     def test_register_damage_incoming_character_died(self, mock_stdout):
