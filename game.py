@@ -67,6 +67,7 @@ def main():
             game_play = False
 
     if player['hp'] <= 0:
+        character.delete_user(name)
         conclusion.game_lose()
     else:
         conclusion.game_win()
