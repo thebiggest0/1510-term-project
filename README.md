@@ -18,3 +18,7 @@ thebiggest0
 tabular form: table
 colum #1 all required elements
 col #2 is where all the line elements
+
+enemy.py create_enemy(difficulty) dictionary comprehension
+
+game_start.py warm_up_question(name) itertools
