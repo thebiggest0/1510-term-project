@@ -7,6 +7,10 @@ import json
 def create_enemy(difficulty):
     """
     Create an enemy with specified attributes.
+
+    :param difficulty: a str, representing the difficulty of the enemy
+    :precondition: difficulty must be a str
+    :postcondition: create an enemy with specified attributes, save it to a JSON file
     """
     enemy_data_path = '../game_data/enemy_template.json'
     output_path = '../game_data/enemy.json'
