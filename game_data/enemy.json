@@ -55,22 +55,6 @@
         "str": 10,
         "experience": 5
     },
-    "Count Dooku": {
-        "name": "Count Dooku",
-        "difficulty": 3,
-        "hp": 100,
-        "str": 10,
-        "experience": 100,
-        "dialogue": "Count Dooku!!"
-    },
-    "Asajj Ventress": {
-        "name": "Asajj Ventress",
-        "difficulty": 3,
-        "hp": 100,
-        "str": 10,
-        "experience": 100,
-        "dialogue": "I am Asajj Ventress!!"
-    },
     "General Grievous": {
         "name": "General Grievous",
         "difficulty": 3,
