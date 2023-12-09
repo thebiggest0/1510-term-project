@@ -10,7 +10,7 @@ def game_lose():
     :precondition: character's HP becomes 0
     :postcondition: print the losing result to user
     """
-    print('.·´¯`(>▂<)´¯`·. Oops you deid, better luck next time!.·´¯`(>▂<)´¯`·. ')
+    print('.·´¯`(>▂<)´¯`·. Oops you died, better luck next time!.·´¯`(>▂<)´¯`·. ')
 
 
 def game_win():
