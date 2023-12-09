@@ -13,7 +13,16 @@ A01381221
 
 thebiggest0
 
-## Any important comments you'd like to make about your work:
+## About the game
+
+
+
+| Required elements        | Location of elements                   |
+|--------------------------|----------------------------------------|
+| Dictionary comprehension | enemy.py <br/>create_enemy(difficulty) |
+|--------------------------| -----------------------------------    |
+| Itertools                | game_start.py <br/>warm_up_questions(name)  |
+
 
 tabular form: table
 colum #1 all required elements
