@@ -53,6 +53,7 @@ class TestLevelUp(TestCase):
         }
         self.assertEqual(actual, expected)
 
+
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_level_1_level_up_to_2(self, mock_output):
         character_info = {
@@ -71,8 +72,8 @@ class TestLevelUp(TestCase):
             'level': 2,
             'experience': 10,
             'hp': 60,
-            'str': 16,
-            'int': 16,
+            'str': 18,
+            'int': 18,
             'x-coordinate': 0,
             "y-coordinate": 0
         }
@@ -99,8 +100,8 @@ class TestLevelUp(TestCase):
             'level': 3,
             'experience': 10,
             'hp': 60,
-            'str': 16,
-            'int': 16,
+            'str': 18,
+            'int': 18,
             'x-coordinate': 0,
             "y-coordinate": 0
         }
