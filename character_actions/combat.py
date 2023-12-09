@@ -360,7 +360,7 @@ def fight_enemy(character, enemy):
             # if enemy not dead, they attack you
             if enemy['hp'] > 0:
                 character_status = register_damage_incoming(character, enemy)
-                battle_status = False
+                battle_status = True
             else:
                 experience_up(character, enemy)
                 save_data.save_game(character)

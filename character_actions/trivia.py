@@ -25,7 +25,7 @@ def star_wars_trivia():
     :postcondition: return a dict with random trivia question
     :return: a dict, with a random trivia question
     """
-    file = '../game_data/trivia.json'
+    file = 'game_data/trivia.json'
     data = save_data.read_trivia(file)
     number = random.randrange(23)
     question = data[f'question_{number}']
@@ -109,11 +109,13 @@ def player_stat_increase(name):
 
     :param name: a str, the player's name
     :precondition: function is called to increase the player's strength or intelligence by 5
-    :postcondition: increase the player's strength or intelligence  by 5
+    :postcondition: increase the player's strength or intelligence by 5
+    :postcondition: prints something to the screen
     """
     number = random.randrange(2)
     stats = ['str', 'int']
     stat = stats[number]
+    print(f'Your {stat} has increased by 5!')
     player_data = save_data.read_character(name)
 
     player_data[stat] += 5

@@ -19,7 +19,7 @@ def main():
     players = save_data.read_all_characters()
     if name not in players:
         game_start.intro_text()
-        player_data = character_status.create_character(name)
+        player_data = character.create_character(name)
         save_data.save_game(player_data)
         difficulty = game_start.select_difficulty()
         game_start.warm_up_question(name)
@@ -36,7 +36,10 @@ def main():
         game_end = False
         player = save_data.read_character(name)
         player_current_position = [player['x-coordinate'], player['y-coordinate']]
-        command = input("Enter move ('w', 's', 'a' or 'd') to move (up, down, left or right): ")
+        command = input("Enter move ('w', 's', 'a' or 'd') to move (up, down, left or right) or 'q' for STATS: ")
+        if command == 'q':
+            character.check_stats(player)
+            continue
         if command in ['w', 's', 'a', 'd']:
             player_pos = move.move_player(player_current_position, command, map_size, game_map)
 
@@ -44,12 +47,13 @@ def main():
             player['y-coordinate'] = player_pos[1]
 
             move.print_map(game_map, player_pos)
+            save_data.save_game(player)
 
             current_spot = game_map[player_pos[1]][player_pos[0]]
             enemy_checker = combat.event_checker(current_spot)
             if enemy_checker:
                 game_end = combat.fight_enemy(player, enemy_checker)
-                character_status.level_up(player)
+                character.level_up(player)
             else:
                 if current_spot == 'J':
                     trivia.jedi_interaction(player['name'])

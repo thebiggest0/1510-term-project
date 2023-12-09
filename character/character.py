@@ -24,8 +24,8 @@ def create_character(name):
         'hp': 50,
         'str': 15,
         'int': 15,
-        'x-coordinate': 0,
-        "y-coordinate": 0
+        'x-coordinate': 10,
+        "y-coordinate": 11
     }
     return character_info
 
@@ -66,6 +66,12 @@ def stat_increase(character_info):
     save_data.save_game(character_info)
     print('Your stats have increased!')
     print(f'HP: {character_info["hp"]} \nSTR: {character_info["str"]} \nINT: {character_info["int"]} ')
+
+
+def check_stats(character):
+    print(f'Character STR: {character["str"]} INT: {character["int"]}')
+    print(f'Character HP: {character["hp"]}')
+    print(f'LEVEL: {character["level"]} EXP: {character["experience"]}')
 
 
 def main():
