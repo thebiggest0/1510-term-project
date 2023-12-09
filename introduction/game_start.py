@@ -1,5 +1,5 @@
 """
-ADD A DOCSTRING
+Start the game.
 """
 import itertools
 from save import save_data

@@ -1,41 +1,34 @@
 """
-ADD A DOCSTRING
+Create enemy.
 """
 import json
-from save import save_data
+
 
 def create_enemy(difficulty):
     """
     Create an enemy with specified attributes.
+
+    :param difficulty: a str, representing the difficulty of the enemy
+    :precondition: difficulty must be a str
+    :postcondition: create an enemy with specified attributes, save it to a JSON file
     """
-    # stats = {'easy': 1, 'medium': 1.25, 'hard': 2}
-    enemy_data = '../game_data/enemy_template.json'
-    with open(enemy_data, 'r') as output_data:
-        data = json.load(output_data)
+    enemy_data_path = '../game_data/enemy_template.json'
+    output_path = '../game_data/enemy.json'
 
-        for name in data:
-            for key in data[name]:
-                if key in ['hp', 'str', 'int', 'dex']:
-                    data[name][key] *= difficulty
-                    int(data[name][key])
+    with open(enemy_data_path, 'r') as input_file:
+        data = json.load(input_file)
 
-            # update json file with new updated data
-            with open('../game_data/enemy.json', 'w') as file:
-                json.dump(data, file, indent=4)
+        updated_data = {
+            name: {key: value * difficulty if key in ['hp', 'str', 'int', 'dex'] else value
+                   for key, value in attributes.items()}
+            for name, attributes in data.items()
+        }
 
-
-
-
-
-def fight_emperor():
-    pass
+    with open(output_path, 'w') as output_file:
+        json.dump(updated_data, output_file, indent=4)
 
 
 def main():
-    # only call this function once at the beginning
-    # should pull data from JSON with enemy names and difficulty rating
-    # should create all possible enemies based on difficulty level chosen
-    # store all these info in JSON eventually
     create_enemy('easy')
 
 
