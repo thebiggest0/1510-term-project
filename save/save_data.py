@@ -1,25 +1,16 @@
 """
-ADD A DOCSTRING
+Save game data.
 """
 
 import json
 
 
-# def save_game(character):
-#     write_json(character)
-
-
 def save_game(character):
-
-    # stores all data in json file as 'data'
     with open('game_data/character.json', 'r') as file:
         data = json.load(file)
 
-    # add character name as key with entire dictionary as value to data
-    # if existing data, it will override, if it does not exist it will add as new
     data.update({character['name']: character})
 
-    # update json file with new updated data
     with open('game_data/character.json', 'w') as file:
         json.dump(data, file, indent=4)
 
