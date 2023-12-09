@@ -10,11 +10,11 @@ class TestCreateCharacter(TestCase):
             'name': 'Thor',
             'level': 1,
             'experience': 0,
-            'hp': 50,
+            'hp': 80,
             'str': 15,
             'int': 15,
-            'x-coordinate': 0,
-            "y-coordinate": 0
+            'x-coordinate': 10,
+            "y-coordinate": 11
         }
         self.assertEqual(actual, expected)
 
@@ -25,10 +25,10 @@ class TestCreateCharacter(TestCase):
             'name': 'Loki',
             'level': 1,
             'experience': 0,
-            'hp': 50,
+            'hp': 80,
             'str': 15,
             'int': 15,
-            'x-coordinate': 0,
-            "y-coordinate": 0
+            'x-coordinate': 10,
+            "y-coordinate": 11
         }
         self.assertEqual(actual, expected)

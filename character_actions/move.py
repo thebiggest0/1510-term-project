@@ -8,7 +8,11 @@ import json
 
 def initialize_map():
     """
-    NO DOCSTRING FOR NOW
+    Initialize the game map.
+
+    :precondition: game is started
+    :postcondition: return a list of lists representing the game map
+    :return: a list of lists representing the game map
     """
     game_map = [
            ["J", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "O", " ", "J"],
@@ -84,7 +88,7 @@ def print_map(game_map, player_position):
         print('|', end='  ')
         for index_column in range(len(game_map[index_row])):
             if [index_column, index_row] == player_position:
-                print('X', end='  ')
+                print('\033[92m' + 'X' + '\033[0m', end='  ')
             else:
                 print(game_map[index_row][index_column], end='  ')
         print('|')
@@ -118,7 +122,7 @@ def main():
     with open('../game_data/character.json', 'r') as file:
         data = json.load(file)
         if name not in data:
-            player = character_status.create_character(name)
+            player = character.create_character(name)
             save_data.save_game(player)
             with open('../game_data/character.json', 'r') as game_file:
                 data = json.load(game_file)
@@ -134,7 +138,6 @@ def main():
         if command in ['w', 's', 'a', 'd']:
             player_pos = move_player(player_pos, command, map_size, game_map)
 
-            # update player position
             player['x-coordinate'] = player_pos[0]
             player['y-coordinate'] = player_pos[1]
 
