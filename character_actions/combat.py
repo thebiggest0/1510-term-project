@@ -360,6 +360,8 @@ def fight_enemy(character, enemy):
             # if enemy not dead, they attack you
             if enemy['hp'] > 0:
                 character_status = register_damage_incoming(character, enemy)
+                if not character_status:
+                    break
                 battle_status = True
             else:
                 experience_up(character, enemy)
