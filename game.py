@@ -3,7 +3,7 @@ Play the game.
 """
 from save import save_data
 from enemy import enemy
-from character import character_status
+from character import character
 from character_actions import combat
 from character_actions import move
 from character_actions import trivia

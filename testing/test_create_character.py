@@ -1,5 +1,5 @@
 from unittest import TestCase
-from character.character_status import create_character
+from character.character import create_character
 
 
 class TestCreateCharacter(TestCase):

@@ -1,7 +1,7 @@
 from unittest import TestCase
 from unittest.mock import patch
 import io
-from character.character_status import stat_increase
+from character.character import stat_increase
 
 
 class TestStatIncrease(TestCase):

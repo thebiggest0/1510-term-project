@@ -2,17 +2,13 @@
 Move the character.
 """
 from save import save_data
-from character import character_status
+from character import character
 import json
 
 
 def initialize_map():
     """
-    Initialize the game map.
-
-    :precondition: function is called to initialize the game map
-    :postcondition: initialize the game map
-    :return: a list of lists, representing the game map
+    NO DOCSTRING FOR NOW
     """
     game_map = [
            ["J", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "O", " ", "J"],
@@ -117,9 +113,6 @@ def check_valid_move(position, game_map):
 
 
 def main():
-    """
-    Drive the program.
-    """
     name = input('What is your name: ')
 
     with open('../game_data/character.json', 'r') as file:
