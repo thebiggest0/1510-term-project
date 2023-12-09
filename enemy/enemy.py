@@ -9,7 +9,6 @@ def create_enemy(difficulty):
     """
     Create an enemy with specified attributes.
     """
-    # stats = {'easy': 1, 'medium': 1.25, 'hard': 2}
     enemy_data = '../game_data/enemy_template.json'
     with open(enemy_data, 'r') as output_data:
         data = json.load(output_data)
@@ -20,13 +19,8 @@ def create_enemy(difficulty):
                     data[name][key] *= difficulty
                     int(data[name][key])
 
-            # update json file with new updated data
             with open('../game_data/enemy.json', 'w') as file:
                 json.dump(data, file, indent=4)
-
-
-def fight_emperor():
-    pass
 
 
 def main():
