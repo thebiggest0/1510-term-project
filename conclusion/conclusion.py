@@ -42,7 +42,7 @@ def game_win():
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣁⣀⠀⠀⠀⠀⣿⡀⠀⣿⠀⠀⠀⠀⠀⠀⢀⣈⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠟⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀""")
     print('(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Hooray! You won the game!! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧')
-    print("Amidst the ruins of the Jedi Temple, you emerge victorious, a lone Jedi who defied the Empire's betrayal.\n "
+    print("Amidst the ruins of the Jedi Temple, you emerge victorious, a lone Jedi who defied Palpatine's betrayal.\n"
           "Your triumph dispels the Empire's fears and rekindles hope in the hearts of those who long for justice.\n"
           "The cityscape slowly recovers, and your name becomes a legend inspiring a flicker of rebellion. Your\n"
           "journey, a testament to resilience, transcends survival, leaving an enduring legacy of hope in the\n"
