@@ -12,7 +12,8 @@ def intro_text():
     :precondition: function is called when the game begins
     :postcondition: print the game introduction
     """
-    print("""It is an era of dire betrayal across the Republic. The once noble Jedi Order has collapsed under a 
+    print("""
+    It is an era of dire betrayal across the Republic. The once noble Jedi Order has collapsed under a 
     shocking act of treachery from within. In a single, calculated strike, the clone troopers, loyal soldiers of the 
     Republic, have turned on their Jedi commanders, executing the infamous Order 66.
 
