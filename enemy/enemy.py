@@ -1,8 +1,9 @@
 """
-ADD A DOCSTRING
+Create enemy.
 """
 import json
 from save import save_data
+
 
 def create_enemy(difficulty):
     """
@@ -24,18 +25,11 @@ def create_enemy(difficulty):
                 json.dump(data, file, indent=4)
 
 
-
-
-
 def fight_emperor():
     pass
 
 
 def main():
-    # only call this function once at the beginning
-    # should pull data from JSON with enemy names and difficulty rating
-    # should create all possible enemies based on difficulty level chosen
-    # store all these info in JSON eventually
     create_enemy('easy')
 
 
