@@ -2,6 +2,7 @@
 Change character status.
 """
 from save import save_data
+import json
 
 
 def create_character(name):
@@ -38,11 +39,12 @@ def level_up(character_info):
     :precondition: character_info must be a dict containing the character's attributes
     :postcondition: increase level of the character in the dict if it reached certain experience, else the dict stay
     unchanged
+    :postcondition: print something to screen
     :return: a dict with updated level if the character reached certain experience, else the dict stay
     unchanged
     """
-    experience_check = [100, 200, 300, 500]
-    if experience_check[character_info['level'] - 1] <= character_info['experience']:
+    experience_check = [100, 200, 300, 500, 1000]
+    if experience_check[character_info['level'] - 1] <= character_info['experience'] and character_info['level'] < 5:
         character_info['experience'] -= experience_check[character_info['level'] - 1]
         character_info['level'] += 1
         print(f'Congratulations {character_info["name"]}! you\'ve leveled up!')
@@ -72,6 +74,18 @@ def check_stats(character):
     print(f'Character STR: {character["str"]} INT: {character["int"]}')
     print(f'Character HP: {character["hp"]}')
     print(f'LEVEL: {character["level"]} EXP: {character["experience"]}')
+
+
+def delete_user(name):
+    print('You have been defeated in battle, your character will cease to exist.')
+    file_location = 'game_data/character.json'
+    with open(file_location, 'r') as file:
+        data = json.load(file)
+        data.pop(name)
+    with open(file_location, 'w') as file:
+        json.dump(data, file, indent=4)
+
+
 
 
 def main():
