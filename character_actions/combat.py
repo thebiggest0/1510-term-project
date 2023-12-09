@@ -8,7 +8,7 @@ from save import save_data
 
 def random_enemy():
     """
-    Select a random enemy based on the current level.
+    Select a random enemy.
 
     :precondition: function is called to select a random enemy; 'save_data' module is properly initialized
     and contains enemy data
