@@ -297,12 +297,14 @@ def fight_mini_boss():
 
     :precondition: function is called to fight a mini boss
     :postcondition: return the mini boss's attributes
+    :postcondition: print something to screen
     :return: a dict representing the mini boss's attributes
     """
     enemies = save_data.read_enemy()
     for enemy in enemies:
         if enemies[enemy]['difficulty'] == 3:
             mini_boss = enemies.pop(enemy)
+            print(mini_boss['dialogue'])
             save_data.update_enemies(enemies)
             return mini_boss
 
@@ -316,14 +318,12 @@ def event_checker(coordinates):
     :postcondition: check if the player has encountered an event
     :return: a Boolean, True if the player has encountered an event, False otherwise
     """
-    print(coordinates)
     if coordinates == '_' or coordinates == ' ':
-        # number = random.randrange(2)
-        # if number == 1:
-        #     return random_enemy()
-        # else:
-        #     return False
-        return False
+        number = random.randrange(2)
+        if number == 1:
+            return random_enemy()
+        else:
+            return False
     elif coordinates == 'J':
         return False
     elif coordinates == 'O':
@@ -343,9 +343,10 @@ def fight_enemy(character, enemy):
     :precondition: character must be a dict representing the character's attributes
     :precondition: enemy must be a dict representing the enemy's attributes
     :postcondition: fight an enemy
+    :postcondition: prints something to the screen.
     :return: a Boolean, True if the player has died, False otherwise
     """
-    print(enemy)
+    print(f'{enemy["name"]} approaches you...')
     battle_status = True
     character_status = True
     while battle_status:

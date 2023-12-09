@@ -59,41 +59,47 @@
         "difficulty": 3,
         "hp": 100,
         "str": 10,
-        "experience": 5
+        "experience": 100,
+        "dialogue": "Count Dooku!!"
     },
     "Asajj Ventress": {
         "name": "Asajj Ventress",
         "difficulty": 3,
         "hp": 100,
         "str": 10,
-        "experience": 5
+        "experience": 100,
+        "dialogue": "I am Asajj Ventress!!"
     },
     "General Grievous": {
         "name": "General Grievous",
         "difficulty": 3,
         "hp": 100,
         "str": 10,
-        "experience": 5
+        "experience": 100,
+        "dialogue": "I am General Grievous!!"
     },
     "Darth Maul": {
         "name": "Darth Maul",
         "difficulty": 3,
         "hp": 100,
         "str": 10,
-        "experience": 5
+        "experience": 100,
+        "dialogue": "I am Darth Maul!!"
     },
     "Darth Vader": {
         "name": "Darth Vader",
         "difficulty": 4,
         "hp": 200,
         "str": 20,
-        "experience": 500
+        "experience": 500,
+        "dialogue": "Luke I am your farther!!"
     },
     "Emperor": {
         "name": "Palpatine",
         "difficulty": 4,
         "hp": 300,
         "str": 25,
-        "experience": 0
+        "experience": 0,
+        "dialogue": "The dark side!!"
     }
 }
