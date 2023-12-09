@@ -2,25 +2,26 @@
 Create enemy.
 """
 import json
-from save import save_data
 
 
 def create_enemy(difficulty):
     """
     Create an enemy with specified attributes.
     """
-    enemy_data = '../game_data/enemy_template.json'
-    with open(enemy_data, 'r') as output_data:
-        data = json.load(output_data)
+    enemy_data_path = '../game_data/enemy_template.json'
+    output_path = '../game_data/enemy.json'
 
-        for name in data:
-            for key in data[name]:
-                if key in ['hp', 'str', 'int', 'dex']:
-                    data[name][key] *= difficulty
-                    int(data[name][key])
+    with open(enemy_data_path, 'r') as input_file:
+        data = json.load(input_file)
 
-            with open('../game_data/enemy.json', 'w') as file:
-                json.dump(data, file, indent=4)
+        updated_data = {
+            name: {key: value * difficulty if key in ['hp', 'str', 'int', 'dex'] else value
+                   for key, value in attributes.items()}
+            for name, attributes in data.items()
+        }
+
+    with open(output_path, 'w') as output_file:
+        json.dump(updated_data, output_file, indent=4)
 
 
 def main():
