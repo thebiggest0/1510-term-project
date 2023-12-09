@@ -12,8 +12,8 @@ def create_enemy(difficulty):
     :precondition: difficulty must be a str
     :postcondition: create an enemy with specified attributes, save it to a JSON file
     """
-    enemy_data_path = '../game_data/enemy_template.json'
-    output_path = '../game_data/enemy.json'
+    enemy_data_path = 'game_data/enemy_template.json'
+    output_path = 'game_data/enemy.json'
 
     with open(enemy_data_path, 'r') as input_file:
         data = json.load(input_file)
