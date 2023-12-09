@@ -53,12 +53,28 @@ Welcome to the game! This section provides you with the essential controls and k
 ## Game Save
 
 Our game supports multiple player accounts. Try out all 3 difficulties while keeping each file saved. Make sure to 
-choose a different name so you don't override the previously saved data.
+choose a different name.
 
 Your game will auto save after a successful character movement, level up, battle and interaction. Exit the game and log
-back in by entering the same character name. 
+back in by entering the same character name.
 
-tabular form: table
-colum #1 all required elements
-col #2 is where all the line elements
+## Game Lore
 
+After narrowly escaping the treacherous Order 66, you arrive back on the planet of Coruscant. The once-thriving heart of the Galactic Republic now casts a shadow of despair, signaling the fall of the Jedi Order. The Dark Side's grip tightens over the galaxy, with Emperor Palpatine rising in power.
+
+## Mission
+
+Your journey begins amidst the towering skyscrapers and neon-lit streets of Coruscant. As a surviving Jedi, your mission is to navigate through this vast urban landscape, evading the clutches of the new regime, and make your way to the Jedi Temple.
+
+The temple, once a symbol of hope is now in ruins. It is here that you must confront the ultimate embodiment of evil, Emperor Palpatine himself. Defeat him, and you could restore balance to the Force, reviving hope in a galaxy plunged into darkness.
+
+## Gameplay
+
+    Explore Coruscant: Traverse through the map and make your way into the jedi temple.
+    Stealth and Strategy: Choose to fight your way into the jedi temple or take a stealthy approach instead.
+    Combat and Skills: Engage in lightsaber duels and harness your Force abilities to overcome obstacles and enemies.
+    Epic Confrontation: Face Emperor Palpatine, Darth Vador, General Grevious and more in an epic show down to restore balance to the force.
+
+Will you be the beacon of light in these dark times?
+
+Embark on this journey, outmaneuver the forces of darkness, and carve a path to victory. Your legacy as a Jedi awaits.
