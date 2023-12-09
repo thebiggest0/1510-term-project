@@ -256,7 +256,7 @@ def register_damage_incoming(character, enemy):
         print('Your HP has fallen to 0, you have died...')
         return False
     else:
-        print(f'You took {enemy["str"]} damage')
+        print(f'The enemy fought back and you took {enemy["str"]} damage')
         return True
     # relate this to player_alive = boolean
 
