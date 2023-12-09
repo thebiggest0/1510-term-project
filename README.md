@@ -2,19 +2,18 @@
 
 ## Your names:
 
-Name goes here
+Yifei Zeng
+Cai Chun (Steven) Yan
 
 ## Your student numbers:
 
-Student number goes here
+A01381221
 
 ## Your GitHub usernames:
 
-GItHub username goes here
+thebiggest0
 
 ## Any important comments you'd like to make about your work:
-
-REPLACE THIS LINE WITH ANY COMMENTS
 
 tabular form: table
 colum #1 all required elements
