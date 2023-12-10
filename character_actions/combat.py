@@ -267,10 +267,12 @@ def fight_vader():
 
     :precondition: function is called to fight Darth Vader
     :postcondition: return Darth Vader's attributes
+    :postcondition: print something to the screen
     :return: a dict representing Darth Vader's attributes
     """
     enemies = save_data.read_enemy()
     boss = enemies['Darth Vader']
+    print(boss['dialogue'])
     return boss
 
 
@@ -280,10 +282,12 @@ def fight_emperor():
 
     :precondition: function is called to fight Emperor Palpatine
     :postcondition: return Emperor Palpatine's attributes
+    :postcondition: print something to the screen
     :return: a dict representing Emperor Palpatine's attributes
     """
     enemies = save_data.read_enemy()
     boss = enemies['Emperor']
+    print(boss['dialogue'])
     return boss
 
 
@@ -293,7 +297,7 @@ def fight_mini_boss():
 
     :precondition: function is called to fight a mini boss
     :postcondition: return the mini boss's attributes
-    :postcondition: print something to screen
+    :postcondition: print something to the screen
     :return: a dict representing the mini boss's attributes
     """
     enemies = save_data.read_enemy()
