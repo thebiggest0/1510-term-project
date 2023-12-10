@@ -19,6 +19,7 @@ def main():
     players = save_data.read_all_characters()
     if name not in players:
         game_start.intro_text()
+        game_start.how_to_play()
         player_data = character.create_character(name)
         save_data.save_game(player_data)
         difficulty = game_start.select_difficulty()
@@ -36,7 +37,7 @@ def main():
         game_end = False
         player = save_data.read_character(name)
         player_current_position = [player['x-coordinate'], player['y-coordinate']]
-        command = input("Enter move ('w', 's', 'a' or 'd') to move (up, down, left or right) or 'q' for STATS: ")
+        command = input("Enter move (w):UP (s):DOWN (a):LEFT (d):RIGHT or '(q):STATS: ")
         if command == 'q':
             character.check_stats(player)
             continue
