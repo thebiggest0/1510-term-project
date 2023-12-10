@@ -145,7 +145,7 @@ def run_away():
 
 def attack_lightsaber(character):
     """
-    Simulate a lightsaber attack in a combat scenario.
+    Attack enemy using lightsaber.
 
     :param character: a dictionary representing the character's attributes, including strength ('str')
     :precondition: function is called to simulate a lightsaber attack
@@ -169,7 +169,7 @@ def attack_lightsaber(character):
 
 def attack_force(character):
     """
-    Simulate a force attack in a combat scenario.
+    Attack enemy using force.
 
     :param character: a dictionary representing the character's attributes, including strength ('str')
     :precondition: function is called to simulate a force attack
@@ -185,7 +185,7 @@ def attack_force(character):
     except ValueError:
         return damage
     if user_answer == question[1]:
-        damage += character['str']
+        damage += character['int']
         return damage
     else:
         return damage
@@ -258,7 +258,6 @@ def register_damage_incoming(character, enemy):
     else:
         print(f'The enemy fought back and you took {enemy["str"]} damage')
         return True
-    # relate this to player_alive = boolean
 
 
 def fight_vader():
