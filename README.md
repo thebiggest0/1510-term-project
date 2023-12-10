@@ -36,10 +36,10 @@ Welcome to the game! This section provides you with the essential controls and k
 ## Key Symbols
 
     X: This symbol represents your character. It's your avatar in this epic journey.
-    P (Palpatine): Encounter with the final boss. Prepare for a challenging battle.
-    V (Darth Vader): This symbol denotes the second boss. A formidable opponent requiring strategy and strength.
+    P: (Palpatine): Encounter with the final boss. Prepare for a challenging battle.
+    V: (Darth Vader): This symbol denotes the second boss. A formidable opponent requiring strategy and strength.
     O: Represents mini-bosses like Count Dooku and General Grievous. Each mini-boss offers unique challenges.
-    J (Force Ghost): These are fallen jedi masters that provide unlimited healing and stat bonus. Answer their questions correctly to gain their aid.
+    J: (Force Ghost): These are fallen jedi masters that provide unlimited healing and stat bonus. Answer their questions correctly to gain their aid.
     #: These are walls within the game. They define boundaries and obstacles in your path.
 
 ## Game Secrets
@@ -52,8 +52,9 @@ Welcome to the game! This section provides you with the essential controls and k
 
 ## Game Save
 
-Our game supports multiple player accounts. Try out all 3 difficulties while keeping each file saved. Make sure to 
-choose a different name.
+Our game supports multiple player accounts. Please make sure to create different character names. Each difficulty can
+only be experienced one at a time (when new difficulty is selected the existing enemy.json file will be updated). 
+
 
 Your game will auto save after a successful character movement, level up, battle and interaction. Exit the game and log
 back in by entering the same character name.
@@ -78,3 +79,9 @@ The temple, once a symbol of hope is now in ruins. It is here that you must conf
 Will you be the beacon of light in these dark times?
 
 Embark on this journey, outmaneuver the forces of darkness, and carve a path to victory. Your legacy as a Jedi awaits.
+
+## Retrospective
+
+We attempted the GUI and was not able to fully implement it.
+If we had more time, we wish to create more dialogue and interactive elements in the game as well as enhance combat
+and make our save system work for different levels as well.
