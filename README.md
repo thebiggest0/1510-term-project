@@ -17,11 +17,21 @@
 
 ## Required Information
 
-| Required elements        | Location of elements                                                                              |
-|--------------------------|---------------------------------------------------------------------------------------------------|
-| Dictionary comprehension | Package: enemy<br/>Module: enemy.py <br/>Function: create_enemy() <br/>Line: 22                   |
-| Itertools                | Package: introduction<br/>Module: game_start.py <br/>Function: warm_up_questions() <br/>Line: 123 |
-| Auto Save                | Package: save<br/>Module: save_data.py                                                            |
+| Required elements              | Location of elements                                                                              |
+|--------------------------------|---------------------------------------------------------------------------------------------------|
+| Dictionary comprehension       | Package: enemy<br/>Module: enemy.py <br/>Function: create_enemy() <br/>Line: 22                   |
+| Itertools                      | Package: introduction<br/>Module: game_start.py <br/>Function: warm_up_questions() <br/>Line: 123 |
+| Auto Save                      | Package: save<br/>Module: save_data.py                                                            |
+| Immutable data structure tuple |                                                                                                   |
+| Mutable data structure list    |                                                                                                   |
+| For loop                       |                                                                                                   |
+| If statement                   |                                                                                                   |
+| Random module                  |                                                                                                   |
+| Exception                      |                                                                                                   |
+| F-string                       |                                                                                                   |
+| Range                          |                                                                                                   |
+| Membership operator            |                                                                                                   |
+| Function annotation            |                                                                                                   |
 
 
 ## Game Controls and Key Symbols

@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from save import save_data
 from enemy import enemy
-from character import character_status
+from character import character
 from character_actions import combat
 from character_actions import move
 from character_actions import trivia
@@ -50,7 +50,7 @@ class GameGUI:
 
             if enemy_checker:
                 game_end = combat.fight_enemy(self.player, enemy_checker)
-                character_status.level_up(self.player)
+                character.level_up(self.player)
             else:
                 if current_spot == 'J':
                     trivia.jedi_interaction(self.player['name'])
@@ -76,7 +76,7 @@ def main():
 
     if name not in players:
         game_start.intro_text()
-        player_data = character_status.create_character(name)
+        player_data = character.create_character(name)
         save_data.save_game(player_data)
         difficulty = game_start.select_difficulty()
         game_start.warm_up_question(name)
