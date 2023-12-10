@@ -105,7 +105,7 @@ def random_calculate_generator():
     else:
         random_result = number_one - number_two
         operation = '-'
-    return [f'{number_one} {operation} {number_two} = ', random_result]
+    return [f'({number_one}) {operation} ({number_two}) = ', random_result]
 
 
 def random_product_generator():
@@ -227,6 +227,18 @@ def register_damage_outgoing(enemy, output_damage):
     0, prints a message indicating the enemy has been defeated and returns True; otherwise, prints a message indicating
     the damage dealt to the enemy and returns False
     :return: a Boolean, True if the enemy is defeated, False otherwise
+
+    >>> test_enemy = {'name': 'Battle Droids', 'hp': 10}
+    >>> test_damage = 10
+    >>> register_damage_outgoing(test_enemy, test_damage)
+    You defeated Battle Droids
+    True
+
+    >>> test_enemy = {'name': 'Battle Droids', 'hp': 20}
+    >>> test_damage = 10
+    >>> register_damage_outgoing(test_enemy, test_damage)
+    You dealt 10 to Battle Droids
+    False
     """
     enemy['hp'] -= output_damage
     if enemy['hp'] <= 0:
