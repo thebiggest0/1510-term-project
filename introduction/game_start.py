@@ -131,6 +131,22 @@ def warm_up_question(name):
         print(f'Sorry, wrong answer. The correct answer is {correct_answer}. Enjoy your game!')
 
 
+def how_to_play():
+    """
+    Prints game instructions for player.
+
+    :postcondition: prints something to the screen
+    """
+    print('X: This symbol represents your character. It\'s your avatar in this epic journey.\n'
+          '#: These are walls within the game. They define boundaries and obstacles in your path\n'
+          'P: (Palpatine): Encounter with the final boss. Prepare for a challenging battle.\n'
+          'J: (Force Ghost): These are fallen jedi masters that provide unlimited healing and stat bonus\n'
+          'O: Represents mini-bosses like Count Dooku and General Grievous.\n'
+          'V: (Darth Vader): This symbol denotes the second boss.\n'
+          '\n'
+          'Your goal is to make your way to the Jedi temple and defeat Palpatine!')
+
+
 def main():
     name = 'Thor'
     warm_up_question(name)
