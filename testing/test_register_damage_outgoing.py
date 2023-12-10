@@ -17,4 +17,4 @@ class TestDamageOut(TestCase):
         enemy_data = {"name": "Royal Guard", "hp": -10}
         result = register_damage_outgoing(enemy_data, 80)
         self.assertTrue(result)
-        self.assertEqual(mock_stdout.getvalue(), 'You slain Royal Guard\n')
+        self.assertEqual(mock_stdout.getvalue(), 'You defeated Royal Guard\n')
