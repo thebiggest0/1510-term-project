@@ -110,7 +110,7 @@ def check_valid_move(position, game_map):
     >>> check_valid_move([0, 1], [['#', '_', '#'], ['#', 'X', '_'], ['#', '_', 'X']])
     False
     """
-    if game_map[position[1]][position[0]] in [' ', '_', 'O', 'V', 'J', 'P']:
+    if game_map[position[1]][position[0]] in (' ', '_', 'O', 'V', 'J', 'P'):
         return True
     else:
         return False

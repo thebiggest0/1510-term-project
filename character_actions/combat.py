@@ -105,7 +105,7 @@ def random_calculate_generator():
     else:
         random_result = number_one - number_two
         operation = '-'
-    return [f'{number_one} {operation} ({number_two}) = ', random_result]
+    return [f'{number_one} {operation} {number_two} = ', random_result]
 
 
 def random_product_generator():
