@@ -224,13 +224,13 @@ def register_damage_outgoing(enemy, output_damage):
     :precondition: enemy must be a dict representing the enemy's attributes, including keys 'name' and 'hp'
     :precondition: output_damage must be an int representing amount of damage dealt to the enemy
     :postcondition: deduct the output damage from the enemy's hit points; if the enemy's hit points fall to or below
-    0, prints a message indicating the enemy has been slain and returns True; otherwise, prints a message indicating
+    0, prints a message indicating the enemy has been defeated and returns True; otherwise, prints a message indicating
     the damage dealt to the enemy and returns False
-    :return: a Boolean, True if the enemy is slain, False otherwise
+    :return: a Boolean, True if the enemy is defeated, False otherwise
     """
     enemy['hp'] -= output_damage
     if enemy['hp'] <= 0:
-        print(f'You slain {enemy["name"]}')
+        print(f'You defeated {enemy["name"]}')
         return True
     else:
         print(f'You dealt {output_damage} to {enemy["name"]}')
@@ -370,6 +370,7 @@ def fight_enemy(character, enemy):
             else:
                 print('ran away but took dmg of', damage)
                 character['hp'] -= damage
+                return
     if not character_status:
         return True
     if enemy['name'] == 'Palpatine':
