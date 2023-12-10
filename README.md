@@ -32,6 +32,7 @@
 | Range                          |                                                                                                   |
 | Membership operator            |                                                                                                   |
 | Function annotation            |                                                                                                   |
+| GUI                            | game_with_GUI.py                                                                                  |
 
 
 ## Game Controls and Key Symbols
