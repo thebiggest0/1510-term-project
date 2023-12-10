@@ -174,6 +174,102 @@
         "option_three": "Sarlacc",
         "option_four": "Tauntaun",
         "answer": 2
+    },
+    "question_24": {
+        "question": "What is the name of the senator who adopts Leia at the end of Episode III?",
+        "option_one": "Senator Organa",
+        "option_two": "Senator Amidala",
+        "option_three": "Senator Mon Mothma",
+        "option_four": "Senator Palpatine",
+        "answer": 1
+    },
+    "question_25": {
+        "question": "In Episode V, which creature captures Luke on the planet Hoth?",
+        "option_one": "Wampa",
+        "option_two": "Tauntaun",
+        "option_three": "Bantha",
+        "option_four": "Rancor",
+        "answer": 1
+    },
+    "question_26": {
+        "question": "Who is the commander of the Rebel fleet in the Battle of Endor in Episode VI?",
+        "option_one": "Admiral Ackbar",
+        "option_two": "General Madine",
+        "option_three": "Mon Mothma",
+        "option_four": "Lando Calrissian",
+        "answer": 1
+    },
+    "question_27": {
+        "question": "In Episode III, who defeats General Grievous?",
+        "option_one": "Mace Windu",
+        "option_two": "Yoda",
+        "option_three": "Obi-Wan Kenobi",
+        "option_four": "Anakin Skywalker",
+        "answer": 3
+    },
+    "question_28": {
+        "question": "What is the main color of Obi-Wan Kenobi's lightsaber in Episode III?",
+        "option_one": "Red",
+        "option_two": "Green",
+        "option_three": "Blue",
+        "option_four": "Purple",
+        "answer": 3
+    },
+    "question_29": {
+        "question": "In Episode VI, what is the name of the forest moon the Rebels visit?",
+        "option_one": "Dagobah",
+        "option_two": "Yavin IV",
+        "option_three": "Endor",
+        "option_four": "Kashyyyk",
+        "answer": 3
+    },
+    "question_30": {
+        "question": "What is the name of the Jedi who confronts Palpatine alongside Mace Windu in Episode III?",
+        "option_one": "Kit Fisto",
+        "option_two": "Plo Koon",
+        "option_three": "Ki-Adi-Mundi",
+        "option_four": "Agen Kolar",
+        "answer": 1
+    },
+    "question_31": {
+        "question": "What type of creature is Chewbacca?",
+        "option_one": "Ewok",
+        "option_two": "Jawa",
+        "option_three": "Wookiee",
+        "option_four": "Rodian",
+        "answer": 3
+    },
+    "question_32": {
+        "question": "Which planet does the Rebel Alliance evacuate at the start of Episode V?",
+        "option_one": "Endor",
+        "option_two": "Yavin IV",
+        "option_three": "Alderaan",
+        "option_four": "Hoth",
+        "answer": 4
+    },
+    "question_33": {
+        "question": "In Episode III, who says the line, 'So this is how liberty dies...with thunderous applause'?",
+        "option_one": "Padmé Amidala",
+        "option_two": "Mace Windu",
+        "option_three": "Yoda",
+        "option_four": "Obi-Wan Kenobi",
+        "answer": 1
+    },
+    "question_34": {
+        "question": "What is the name of the opera Anakin and Palpatine attend in Episode III?",
+        "option_one": " The Tragedy of Darth Plagueis \"The Wise\"",
+        "option_two": "The Naboo Chronicles",
+        "option_three": "The Fall of the Jedi",
+        "option_four": "The Galactic Symphony",
+        "answer": 1
+    },
+    "question_35": {
+        "question": "Who is Leia's adoptive father?",
+        "option_one": "Mon Mothma",
+        "option_two": "Garm Bel Iblis",
+        "option_three": "Owen Lars",
+        "option_four": "Bail Organa",
+        "answer": 4
     }
 
 
