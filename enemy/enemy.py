@@ -29,6 +29,9 @@ def create_enemy(difficulty):
 
 
 def main():
+    """
+    Drive the program.
+    """
     create_enemy('easy')
 
 

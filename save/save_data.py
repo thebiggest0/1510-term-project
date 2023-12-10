@@ -6,7 +6,13 @@ import json
 
 
 def save_game(character):
+    """
+    Save the game.
 
+    :param character: a dict containing the character's attributes
+    :precondition: character must be a dict containing the character's attributes
+    :postcondition: save the game
+    """
     # stores all data in json file as 'data'
     try:
         with open('game_data/character.json', 'r') as file:
@@ -29,6 +35,14 @@ def save_game(character):
 
 
 def read_character(name):
+    """
+    Read the character from the game.
+
+    :param name: a non-empty string, name of the character user entered
+    :precondition: name must be a non-empty string
+    :postcondition: read the character from the game
+    :return: a dict containing the character's attributes
+    """
     file_location = 'game_data/character.json'
     try:
         with open(file_location, 'r') as file:
@@ -41,6 +55,13 @@ def read_character(name):
 
 
 def read_all_characters():
+    """
+    Read all characters from the game.
+
+    :precondition: function must be called
+    :postcondition: read all characters from the game
+    :return: a dict containing all characters' attributes
+    """
     file_location = 'game_data/character.json'
     try:
         with open(file_location, 'r') as file:
@@ -53,6 +74,13 @@ def read_all_characters():
 
 
 def read_enemy():
+    """
+    Read the enemy from the game.
+
+    :precondition: function must be called
+    :postcondition: read the enemy from the game
+    :return: a dict containing the enemy's attributes
+    """
     file_location = 'game_data/enemy.json'
     try:
         with open(file_location, 'r') as file:
@@ -65,6 +93,14 @@ def read_enemy():
 
 
 def read_trivia(file_location):
+    """
+    Read the trivia from the game.
+
+    :param file_location: a non-empty string, location of the trivia file
+    :precondition: file_location must be a non-empty string
+    :postcondition: read the trivia from the game
+    :return: a dict containing the trivia's attributes
+    """
     try:
         with open(file_location, 'r') as file:
             output_file = json.load(file)
@@ -76,6 +112,13 @@ def read_trivia(file_location):
 
 
 def update_enemies(data):
+    """
+    Update the enemies in the game.
+
+    :param data: a dict containing the enemy's attributes
+    :precondition: data must be a dict containing the enemy's attributes
+    :postcondition: update the enemies in the game
+    """
     file_location = 'game_data/enemy.json'
     try:
         with open(file_location, 'w') as file:
@@ -86,6 +129,9 @@ def update_enemies(data):
 
 
 def main():
+    """
+    Drive the program.
+    """
     pass
 
 

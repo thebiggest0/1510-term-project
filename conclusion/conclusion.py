@@ -50,6 +50,9 @@ def game_win():
 
 
 def main():
+    """
+    Drive the program.
+    """
     game_win()
 
 

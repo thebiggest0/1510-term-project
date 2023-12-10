@@ -148,6 +148,9 @@ def how_to_play():
 
 
 def main():
+    """
+    Drive the program.
+    """
     name = 'Thor'
     warm_up_question(name)
 
