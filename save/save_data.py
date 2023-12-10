@@ -132,7 +132,7 @@ def main():
     """
     Drive the program.
     """
-    pass
+    save_game({'name': 'T', 'level': 1, 'experience': 0, 'hp': 80, 'str': 15, 'int': 15, 'x-coordinate': 10, 'y-coordinate': 11})
 
 
 if __name__ == "__main__":
