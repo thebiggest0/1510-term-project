@@ -5,7 +5,7 @@ from save import save_data
 import json
 
 
-def create_character(name):
+def create_character(name: str) -> dict:
     """
     Create a character with specified attributes.
 
