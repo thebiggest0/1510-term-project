@@ -1,5 +1,5 @@
 """
-Move the character.
+Move the character across the map.
 """
 from save import save_data
 from character import character
@@ -117,6 +117,9 @@ def check_valid_move(position, game_map):
 
 
 def main():
+    """
+    Drive the program.
+    """
     name = input('What is your name: ')
 
     with open('../game_data/character.json', 'r') as file:
@@ -129,7 +132,7 @@ def main():
         else:
             player = data[name]
 
-    map_size = 10
+    map_size = 14
     player_pos = [data[name]['x-coordinate'], data[name]['y-coordinate']]
     game_map = initialize_map()
     print_map(game_map, player_pos)
