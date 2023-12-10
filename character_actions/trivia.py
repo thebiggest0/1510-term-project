@@ -27,7 +27,7 @@ def star_wars_trivia():
     """
     file = 'game_data/trivia.json'
     data = save_data.read_trivia(file)
-    number = random.randrange(23)
+    number = random.randrange(1, 36)
     question = data[f'question_{number}']
     return question
 
@@ -65,6 +65,7 @@ def ask_trivia(question):
                 print("Please enter a number between 1 and 4.")
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 4.")
+    print('Correct!')
 
 
 def player_choice():
@@ -100,7 +101,7 @@ def player_heal(name):
     player_data = save_data.read_character(name)
     healing = {1: 50, 2: 100, 3: 150}
     player_data['hp'] = healing[player_data['level']]
-    print(f'Your health is back to full! hp: {player_data["hp"]}')
+    print(f'You have been healed! hp: {player_data["hp"]}')
     save_data.save_game(player_data)
 
 
