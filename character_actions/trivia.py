@@ -27,7 +27,7 @@ def star_wars_trivia():
     """
     file = 'game_data/trivia.json'
     data = save_data.read_trivia(file)
-    number = random.randrange(1, 36)
+    number = random.randrange(1, 35)
     question = data[f'question_{number}']
     return question
 
