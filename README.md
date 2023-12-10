@@ -22,16 +22,16 @@
 | Dictionary comprehension       | Package: enemy<br/>Module: enemy.py <br/>Function: create_enemy() <br/>Line: 22                   |
 | Itertools                      | Package: introduction<br/>Module: game_start.py <br/>Function: warm_up_questions() <br/>Line: 123 |
 | Auto Save                      | Package: save<br/>Module: save_data.py                                                            |
-| Immutable data structure tuple |                                                                                                   |
-| Mutable data structure list    |                                                                                                   |
-| For loop                       |                                                                                                   |
-| If statement                   |                                                                                                   |
-| Random module                  |                                                                                                   |
-| Exception                      |                                                                                                   |
-| F-string                       |                                                                                                   |
-| Range                          |                                                                                                   |
-| Membership operator            |                                                                                                   |
-| Function annotation            |                                                                                                   |
+| Immutable data structure tuple | Package: character_actions<br/>Module: move.py <br/>Function: check_valid_move() <br/>Line: 113   |
+| Mutable data structure list    | Package: character<br/>Module: character.py <br/>Function: stat_increase() <br/>Line: 67          |
+| For loop                       | Package: character<br/>Module: character.py <br/>Function: stat_increase() <br/>Line: 68          |
+| If statement                   | Package: character<br/>Module: character.py <br/>Function: level_up() <br/>Line: 48               |
+| Random module                  | Package: character_actions<br/>Module: trivia.py <br/>Function: star_wars_trivia() <br/>Line: 30  |
+| Exception                      | Package: character_actions<br/>Module: combat.py <br/>Function: is_valid_choice() <br/>Line: 48   |
+| F-string                       | Package: character<br/>Module: character.py <br/>Function: stat_increase() <br/>Line: 72          |
+| Range                          | Package: character_actions<br/>Module: move.py <br/>Function: print_map() <br/>Line: 87           |
+| Membership operator            | Package: introduction<br/>Module: game_start.py <br/>Function: difficulty_checker() <br/>Line: 92 |
+| Function annotation            | Package: character<br/>Module: character.py <br/>Function: create_character() <br/>Line: 8        |
 | GUI                            | game_with_GUI.py                                                                                  |
 
 
