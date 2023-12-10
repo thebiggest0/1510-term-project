@@ -60,7 +60,7 @@
         "hp": 100,
         "str": 10,
         "experience": 100,
-        "dialogue": "Count Dooku!!"
+        "dialogue": "Count Dooku: I have become more powerful than any Jedi. Even you!"
     },
     "Asajj Ventress": {
         "name": "Asajj Ventress",
@@ -68,7 +68,7 @@
         "hp": 100,
         "str": 10,
         "experience": 100,
-        "dialogue": "I am Asajj Ventress!!"
+        "dialogue": "Asajj Ventress: I can sense your fear!"
     },
     "General Grievous": {
         "name": "General Grievous",
@@ -76,7 +76,7 @@
         "hp": 100,
         "str": 10,
         "experience": 100,
-        "dialogue": "I am General Grievous!!"
+        "dialogue": "General Grievous: Your lightsaber will make a fine addition to my collection!"
     },
     "Darth Maul": {
         "name": "Darth Maul",
@@ -84,22 +84,22 @@
         "hp": 100,
         "str": 10,
         "experience": 100,
-        "dialogue": "I am Darth Maul!!"
+        "dialogue": "Darth Maul: Soon the sith will remake the galaxy!"
     },
     "Darth Vader": {
         "name": "Darth Vader",
         "difficulty": 4,
-        "hp": 200,
+        "hp": 150,
         "str": 20,
         "experience": 500,
-        "dialogue": "Luke I am your farther!!"
+        "dialogue": "Darth Vader: You don't know the power of the dark side!"
     },
     "Emperor": {
         "name": "Palpatine",
         "difficulty": 4,
-        "hp": 300,
+        "hp": 200,
         "str": 25,
         "experience": 0,
-        "dialogue": "The dark side!!"
+        "dialogue": "Palpatine: Once more the Sith will rule the galaxy!"
     }
 }
