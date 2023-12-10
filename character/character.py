@@ -13,10 +13,10 @@ def create_character(name):
     :precondition: name must be a non-empty string
     :postcondition: create a character dict with specified attributes
     :return: a dict, with specified attributes
-    >>> create_character('Thor')
-    {'name': 'Thor', 'level': 1, 'experience': 0, 'hp': 50, 'str': 15, 'int': 15, 'x-coordinate': 0, 'y-coordinate': 0}
-    >>> create_character('Loki')
-    {'name': 'Loki', 'level': 1, 'experience': 0, 'hp': 50, 'str': 15, 'int': 15, 'x-coordinate': 0, 'y-coordinate': 0}
+    >>> create_character('T')
+    {'name': 'T', 'level': 1, 'experience': 0, 'hp': 80, 'str': 15, 'int': 15, 'x-coordinate': 10, 'y-coordinate': 11}
+    >>> create_character('L')
+    {'name': 'L', 'level': 1, 'experience': 0, 'hp': 80, 'str': 15, 'int': 15, 'x-coordinate': 10, 'y-coordinate': 11}
     """
     character_info = {
         'name': name,
@@ -73,12 +73,26 @@ def stat_increase(character_info):
 
 
 def check_stats(character):
+    """
+    Check the stats of the character.
+
+    :param character: a dict containing the character's attributes
+    :precondition: character must be a dict containing the character's attributes
+    :postcondition: print the character's attributes to the screen
+    """
     print(f'Character STR: {character["str"]} INT: {character["int"]}')
     print(f'Character HP: {character["hp"]}')
     print(f'LEVEL: {character["level"]} EXP: {character["experience"]}')
 
 
 def delete_user(name):
+    """
+    Delete the user from the game.
+
+    :param name: a non-empty string, name of the character user entered
+    :precondition: name must be a non-empty string
+    :postcondition: delete the user from the game
+    """
     print('You have been defeated in battle, your character will cease to exist.')
     file_location = 'game_data/character.json'
     with open(file_location, 'r') as file:
@@ -86,8 +100,6 @@ def delete_user(name):
         data.pop(name)
     with open(file_location, 'w') as file:
         json.dump(data, file, indent=4)
-
-
 
 
 def main():
