@@ -44,10 +44,12 @@ def level_up(character_info):
     unchanged
     """
     experience_check = [100, 200, 300, 500, 1000]
+    player_title = ['Jedi Youngling', 'Jedi Padawan', 'Jedi Knight', 'Jedi Master', 'Jedi Grandmaster']
     if experience_check[character_info['level'] - 1] <= character_info['experience'] and character_info['level'] < 5:
         character_info['experience'] -= experience_check[character_info['level'] - 1]
         character_info['level'] += 1
-        print(f'Congratulations {character_info["name"]}! you\'ve leveled up!')
+        print(f'Congratulations {character_info["name"]}! you\'ve leveled up! You are '
+              f'now a {player_title[character_info["level"] - 1]}')
         stat_increase(character_info)
     return character_info
 
