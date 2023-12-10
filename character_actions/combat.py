@@ -300,12 +300,11 @@ def fight_mini_boss():
     :return: a dict representing the mini boss's attributes
     """
     enemies = save_data.read_enemy()
-    for enemy in enemies:
-        if enemies[enemy]['difficulty'] == 3:
-            mini_boss = enemies.pop(enemy)
-            print(mini_boss['dialogue'])
-            save_data.update_enemies(enemies)
-            return mini_boss
+    mini_bosses = ['Count Dooku', 'Asajj Ventress', 'General Grievous', 'Darth Maul']
+    number = random.randrange(4)
+    mini_boss = enemies[mini_bosses[number]]
+    print(mini_boss['dialogue'])
+    return mini_boss
 
 
 def event_checker(coordinates):
