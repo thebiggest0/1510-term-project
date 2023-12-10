@@ -37,7 +37,7 @@ def main():
         game_end = False
         player = save_data.read_character(name)
         player_current_position = [player['x-coordinate'], player['y-coordinate']]
-        command = input("Enter move (w):UP (s):DOWN (a):LEFT (d):RIGHT or '(q):STATS: ")
+        command = input("Enter move (w):UP (s):DOWN (a):LEFT (d):RIGHT or (q):STATS: ")
         if command == 'q':
             character.check_stats(player)
             continue
