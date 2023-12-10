@@ -15,6 +15,11 @@
 - zengyifei327
 - thebiggest0
 
+## Important Notes:
+Please run unit tests before play the game, as create new characters will modify json file.
+
+for example, test_random_enemy will fail unit test if enemy difficulty is not on easy.
+
 ## Required Information
 
 | Required elements                | Location of elements                                                                              |
@@ -121,3 +126,4 @@ If we had more time, we wish to create more dialogue and interactive elements in
 and make our save system work for different levels as well.
 - When we run unit tests, it will modify json file somehow, if we delete players in character.json, some unit 
   tests will fail
+- Due to our limited experience with json we have tried our best to unit test a dynamic data set.
