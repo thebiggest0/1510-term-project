@@ -99,7 +99,7 @@ def player_heal(name):
     :postcondition: print something to the screen
     """
     player_data = save_data.read_character(name)
-    healing = {1: 50, 2: 100, 3: 150}
+    healing = {1: 50, 2: 100, 3: 150, 4: 150, 5: 150, 6: 150, 7: 150}
     player_data['hp'] = healing[player_data['level']]
     print(f'You have been healed! hp: {player_data["hp"]}')
     save_data.save_game(player_data)
