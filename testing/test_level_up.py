@@ -77,7 +77,7 @@ class TestLevelUp(TestCase):
             "y-coordinate": 0
         }
         the_game_printed_this = mock_output.getvalue()
-        expected_output = 'Congratulations Thor! you\'ve leveled up!'
+        expected_output = 'Congratulations Thor! you\'ve leveled up! You are now a Jedi Padawan'
         self.assertEqual(actual, expected)
         self.assertIn(expected_output, the_game_printed_this)
 
@@ -105,6 +105,6 @@ class TestLevelUp(TestCase):
             "y-coordinate": 0
         }
         the_game_printed_this = mock_output.getvalue()
-        expected_output = 'Congratulations Thor! you\'ve leveled up!'
+        expected_output = 'Congratulations Thor! you\'ve leveled up! You are now a Jedi Knight'
         self.assertEqual(actual, expected)
         self.assertIn(expected_output, the_game_printed_this)
