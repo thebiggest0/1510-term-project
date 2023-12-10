@@ -1,3 +1,6 @@
+"""
+Play the game.
+"""
 import tkinter as tk
 from tkinter import messagebox
 from save import save_data
@@ -71,6 +74,9 @@ class GameGUI:
 
 
 def main():
+    """
+    Run the game.
+    """
     name = game_start.name_entry()
     players = save_data.read_all_characters()
 
