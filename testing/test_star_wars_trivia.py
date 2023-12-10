@@ -19,7 +19,7 @@ class TestStarWarsTrivia(TestCase):
         }
         self.assertEqual(expected, actual)
 
-    @patch('random.randrange', return_value=35)
+    @patch('random.randrange', return_value=23)
     def test_trivia_question_thirty_five(self, _):
 
         expected = star_wars_trivia()
