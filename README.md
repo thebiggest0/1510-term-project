@@ -53,6 +53,25 @@ Welcome to the game! This section provides you with the essential controls and k
     J: (Force Ghost): These are fallen jedi masters that provide unlimited healing and stat bonus. Answer their questions correctly to gain their aid.
     #: These are walls within the game. They define boundaries and obstacles in your path.
 
+## Level system
+
+    Players start at Level 1 and progress up to Level 5.
+    To level up, players must earn experience points through combat with enemies.
+    The experience requirements for each level are as follows:
+        Level 1 to 2: 100 XP
+        Level 2 to 3: 200 XP
+        Level 3 to 4: 300 XP
+        Level 4 to 5: 500 XP
+
+        Level 1: Youngling
+        Level 2: Padawan
+        Level 3: Jedi Knight
+        Level 4: Jedi Master
+        Level 5: Jedi Grandmaster
+
+    Upon reaching a new level, players will experience an enhancement in their abilities: 
+    Each level up results in the player's current stats and HP increasing by a factor of 1.2.
+
 ## Game Secrets
 
     1. Force Ghosts do not disappear, players can interact with them multiple times to gain boots and healing
@@ -63,22 +82,27 @@ Welcome to the game! This section provides you with the essential controls and k
 
 ## Game Save
 
-Our game supports multiple player accounts. Please make sure to create different character names. Each difficulty can
-only be experienced one at a time (when new difficulty is selected the existing enemy.json file will be updated). 
-
-
-Your game will auto save after a successful character movement, level up, battle and interaction. Exit the game and log
-back in by entering the same character name.
+    Our game supports multiple player accounts. Please make sure to create different character names. Each difficulty can
+    only be experienced one at a time (when new difficulty is selected the existing enemy.json file will be updated). 
+    
+    Your game will auto save after a successful character movement, level up, battle and interaction. Exit the game and log
+    back in by entering the same character name.
 
 ## Game Lore
 
-After narrowly escaping the treacherous Order 66, you arrive back on the planet of Coruscant. The once-thriving heart of the Galactic Republic now casts a shadow of despair, signaling the fall of the Jedi Order. The Dark Side's grip tightens over the galaxy, with Emperor Palpatine rising in power.
+    After narrowly escaping the treacherous Order 66, you arrive back on the planet of Coruscant. 
+    The once-thriving heart of the Galactic Republic now casts a shadow of despair, signaling the fall of the Jedi 
+    Order. The Dark Side's grip tightens over the galaxy, with Emperor Palpatine rising in power.
 
 ## Mission
 
-Your journey begins amidst the towering skyscrapers and neon-lit streets of Coruscant. As a surviving Jedi, your mission is to navigate through this vast urban landscape, evading the clutches of the new regime, and make your way to the Jedi Temple.
+    Your journey begins amidst the towering skyscrapers and neon-lit streets of Coruscant. As a surviving Jedi, your 
+    mission is to navigate through this vast urban landscape, evading the clutches of the new regime, and make your 
+    way to the Jedi Temple.
 
-The temple, once a symbol of hope is now in ruins. It is here that you must confront the ultimate embodiment of evil, Emperor Palpatine himself. Defeat him, and you could restore balance to the Force, reviving hope in a galaxy plunged into darkness.
+    The temple, once a symbol of hope is now in ruins. It is here that you must confront the ultimate embodiment of 
+    evil, Emperor Palpatine himself. Defeat him, and you could restore balance to the Force, reviving hope in a galaxy 
+    plunged into darkness.
 
 ## Gameplay
 
@@ -87,9 +111,8 @@ The temple, once a symbol of hope is now in ruins. It is here that you must conf
     Combat and Skills: Engage in lightsaber duels and harness your Force abilities to overcome obstacles and enemies.
     Epic Confrontation: Face Emperor Palpatine, Darth Vador, General Grevious and more in an epic show down to restore balance to the force.
 
-Will you be the beacon of light in these dark times?
-
-Embark on this journey, outmaneuver the forces of darkness, and carve a path to victory. Your legacy as a Jedi awaits.
+    Will you be the beacon of light in these dark times? Embark on this journey, outmaneuver the forces of darkness, 
+    and carve a path to victory. Your legacy as a Jedi awaits.
 
 ## Retrospective
 
