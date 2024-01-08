@@ -8,7 +8,6 @@
 ## Your student numbers:
 
 - A01375821
-- A01381221
 
 ## Your GitHub usernames:
 
